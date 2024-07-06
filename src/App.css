@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card-hover:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  /* Custom CSS */
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .material-text {
+    animation: slideInLeft 0.5s forwards;
+  }
+  

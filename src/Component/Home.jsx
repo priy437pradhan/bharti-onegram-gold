@@ -1,9 +1,19 @@
-import CardSection from "./CardSection";
+import CardSection from './CardSection';
+import CardDetail from './CardDetail';
+import { Routes, Route } from 'react-router-dom';
+
+
 const Home = () => {
+
   return (
     <div>
-      
-      <CardSection />
+      <Routes>
+        <Route path="*" element={<CardSection />} />
+        <Route
+          path="/cards/:id"
+          element={<CardDetail/>}
+        />
+      </Routes>
     </div>
   );
 };

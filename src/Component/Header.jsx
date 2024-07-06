@@ -16,9 +16,7 @@ const Header = () => {
           <a href="service" className="hover:text-gray-300 transition-colors duration-200">Services</a>
           <a href="contact" className="hover:text-gray-300 transition-colors duration-200">Contact</a>
         </nav>
-        <div className="hidden md:block">
-          <a href="#" className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-2 px-4 rounded transition-colors duration-200">Sign Up</a>
-        </div>
+      
         <div className="md:hidden">
           <button
             onClick={toggleMobileMenu}
@@ -34,7 +32,7 @@ const Header = () => {
         <a href="about" className="block px-4 py-2 hover:bg-gray-700 transition-colors duration-200">About</a>
         <a href="service" className="block px-4 py-2 hover:bg-gray-700 transition-colors duration-200">Services</a>
         <a href="contact" className="block px-4 py-2 hover:bg-gray-700 transition-colors duration-200">Contact</a>
-        <a href="#" className="block px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold rounded mt-2 transition-colors duration-200">Sign Up</a>
+       
       </div>
     </header>
   );
