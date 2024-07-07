@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SearchBar from './SearchBar';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,6 +12,9 @@ const Header = () => {
     <header className="bg-gray-900 text-white shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
         <a href="/" className="text-4xl font-bold text-yellow-400">BHARATI</a>
+        <div className="p-4">
+      <SearchBar />
+        </div>
         <nav className="hidden md:flex space-x-6">
           <a href="about" className="hover:text-gray-300 transition-colors duration-200">About</a>
           <a href="service" className="hover:text-gray-300 transition-colors duration-200">Services</a>

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 const Cards = ({ id, title, price, imageUrl, material }) => {
   return (
 
-    <a href={`/cards/${id}`}>
-      <div className="relative max-w-xs rounded overflow-hidden shadow-lg m-4 group cursor-pointer">
+    <a href={`/card/${id}`}>
+      <div className="card-hover relative max-w-xs rounded overflow-hidden shadow-lg m-4 group cursor-pointer" style={{  width: '200px' }}>
         <div className="relative">
           <img
             src={imageUrl}
@@ -16,7 +16,7 @@ const Cards = ({ id, title, price, imageUrl, material }) => {
           </div>
         </div>
         <div className="px-6 py-4 relative z-10">
-          <div className="font-bold text-xl mb-2">{title}</div>
+          <div className="font-500 text-m mb-2">{title}</div>
           <p className="text-gray-700 text-base">${price}</p>
         </div>
       </div>

@@ -6,7 +6,7 @@ import Accordion from './components/Accordion';
 import Contact from './pages/Contact';
 import './App.css';
 import CardDetail from './components/CardDetail';
-import CardSection from './components/CardSection';
+import CardSection from './pages/CardSection';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <Route path="/Contact" element={<Contact  />} />
         
         <Route path="/" element={<CardSection />} />
+
 
 
         <Route path="/card/:id" element={<CardDetail />}/>
