@@ -1,10 +1,10 @@
 import { useParams } from 'react-router-dom';
-import { jewelryData } from '../lib/jewelaryData';
+import { jewelleryData } from '../lib/jewelleryData';
 
 const CardDetail = () => {
   console.log("cardDetail")
   const { id } = useParams();
-  const card = jewelryData.find((card) => card.id === id); 
+  const card = jewelleryData.find((card) => card.id === id); 
 
   if (!card) {
     return (

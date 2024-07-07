@@ -1,4 +1,4 @@
-import { jewelryData } from '../lib/jewelaryData';
+import { jewelleryData } from '../lib/jewelleryData';
 import Card from '../components/MyCard';
 
 const CardSection = () => {
@@ -6,24 +6,165 @@ const CardSection = () => {
     <>
       <main className="container mx-auto py-12">
         <a 
-          href="https://wa.me/7077817064" 
-          className="block bg-gray-100 border border-gray-300 text-lg text-gray-800 p-6 rounded-lg shadow-md text-center mb-8 transform transition duration-300 hover:scale-105 hover:text-blue-600 hover:shadow-lg"
+          href="https://wa.me/9861667624" 
+          className="block bg-green-700 text-indigo-50 border border-gray-300 text-lg p-6 rounded-lg shadow-md text-center mb-8 transform transition duration-300 hover:scale-95 hover:indigo-100 hover:shadow-lg"
           target="_blank"
           rel="noopener noreferrer"
         >
-          For placing an order WhatsApp us on 7077817064
+          Click here For placing an order WhatsApp us on 9861667624
         </a>
-        <div className="flex flex-wrap justify-center">
-          {jewelryData.map((item) => (
-            <Card 
-              key={item.id} 
-              id={item.id}
-              title={item.title} 
-              price={item.price} 
-              imageUrl={item.imageUrl} 
-              material={item.material} 
-            />
-          ))}
+        <h1 className="px-4 py-2 text-3xl font-bold text-gray-800 mb-4 lg:mx-12">
+          Our Jewellery Collection
+        </h1>
+        <div className="overflow-x-auto whitespace-nowrap">
+        <div className="inline-block">
+              <div className="flex flex-nowrap justify-center lg:flex lg:flex-wrap lg:justify-center lg:mx-12">
+                {jewelleryData.map((item) => (
+                  <Card 
+                    key={item.id} 
+                    id={item.id}
+                    title={item.title} 
+                    price={item.price} 
+                    imageUrl={item.imageUrl} 
+                    material={item.material} 
+                  />
+                ))}
+              </div>
+        </div>
+        </div>
+
+        <h1 className="px-4 py-2 text-3xl font-bold text-gray-800 mb-4 lg:mx-12">
+          Necklace
+        </h1>
+        <div className="overflow-x-auto whitespace-nowrap">
+        <div className="inline-block">
+              <div className="flex flex-nowrap justify-center lg:flex lg:flex-wrap lg:justify-center lg:mx-12">
+                {jewelleryData.map((item) => (
+                  <Card 
+                    key={item.id} 
+                    id={item.id}
+                    title={item.title} 
+                    price={item.price} 
+                    imageUrl={item.imageUrl} 
+                    material={item.material} 
+                  />
+                ))}
+              </div>
+        </div>
+        </div>
+        <h1 className="px-4 py-2 text-3xl font-bold text-gray-800 mb-4 lg:mx-12">
+          Earrings
+        </h1>
+        <div className="overflow-x-auto whitespace-nowrap">
+        <div className="inline-block">
+              <div className="flex flex-nowrap justify-center lg:flex lg:flex-wrap lg:justify-center lg:mx-12">
+                {jewelleryData.map((item) => (
+                  <Card 
+                    key={item.id} 
+                    id={item.id}
+                    title={item.title} 
+                    price={item.price} 
+                    imageUrl={item.imageUrl} 
+                    material={item.material} 
+                  />
+                ))}
+              </div>
+        </div>
+        </div>
+        <h1 className="px-4 py-2 text-3xl font-bold text-gray-800 mb-4 lg:mx-12">
+          Bracelet
+        </h1>
+        <div className="overflow-x-auto whitespace-nowrap">
+        <div className="inline-block">
+              <div className="flex flex-nowrap justify-center lg:flex lg:flex-wrap lg:justify-center lg:mx-12">
+                {jewelleryData.map((item) => (
+                  <Card 
+                    key={item.id} 
+                    id={item.id}
+                    title={item.title} 
+                    price={item.price} 
+                    imageUrl={item.imageUrl} 
+                    material={item.material} 
+                  />
+                ))}
+              </div>
+        </div>
+        </div>
+        <h1 className="px-4 py-2 text-3xl font-bold text-gray-800 mb-4 lg:mx-12">
+          Chain
+        </h1>
+        <div className="overflow-x-auto whitespace-nowrap">
+        <div className="inline-block">
+              <div className="flex flex-nowrap justify-center lg:flex lg:flex-wrap lg:justify-center lg:mx-12">
+                {jewelleryData.map((item) => (
+                  <Card 
+                    key={item.id} 
+                    id={item.id}
+                    title={item.title} 
+                    price={item.price} 
+                    imageUrl={item.imageUrl} 
+                    material={item.material} 
+                  />
+                ))}
+              </div>
+        </div>
+        </div>
+        <h1 className="px-4 py-2 text-3xl font-bold text-gray-800 mb-4 lg:mx-12">
+          Ring
+        </h1>
+        <div className="overflow-x-auto whitespace-nowrap">
+        <div className="inline-block">
+              <div className="flex flex-nowrap justify-center lg:flex lg:flex-wrap lg:justify-center lg:mx-12">
+                {jewelleryData.map((item) => (
+                  <Card 
+                    key={item.id} 
+                    id={item.id}
+                    title={item.title} 
+                    price={item.price} 
+                    imageUrl={item.imageUrl} 
+                    material={item.material} 
+                  />
+                ))}
+              </div>
+        </div>
+        </div>
+        <h1 className="px-4 py-2 text-3xl font-bold text-gray-800 mb-4 lg:mx-12">
+          Ear-Ring
+        </h1>
+        <div className="overflow-x-auto whitespace-nowrap">
+        <div className="inline-block">
+              <div className="flex flex-nowrap justify-center lg:flex lg:flex-wrap lg:justify-center lg:mx-12">
+                {jewelleryData.map((item) => (
+                  <Card 
+                    key={item.id} 
+                    id={item.id}
+                    title={item.title} 
+                    price={item.price} 
+                    imageUrl={item.imageUrl} 
+                    material={item.material} 
+                  />
+                ))}
+              </div>
+        </div>
+        </div>
+        <h1 className="px-4 py-2 text-3xl font-bold text-gray-800 mb-4 lg:mx-12">
+          Set
+        </h1>
+        <div className="overflow-x-auto whitespace-nowrap">
+        <div className="inline-block">
+              <div className="flex flex-nowrap justify-center lg:flex lg:flex-wrap lg:justify-center lg:mx-12">
+                {jewelleryData.map((item) => (
+                  <Card 
+                    key={item.id} 
+                    id={item.id}
+                    title={item.title} 
+                    price={item.price} 
+                    imageUrl={item.imageUrl} 
+                    material={item.material} 
+                  />
+                ))}
+              </div>
+        </div>
         </div>
       </main>
     </>

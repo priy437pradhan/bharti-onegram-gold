@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
-import { jewelryData } from '../lib/jewelaryData';
+import { jewelleryData } from '../lib/jewelleryData';
 
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -11,7 +11,7 @@ const SearchBar = () => {
     setSearchQuery(value);
 
     if (value.length >= 3) {
-      const filteredItems = jewelryData.filter(item =>
+      const filteredItems = jewelleryData.filter(item =>
         item.title.toLowerCase().includes(value.toLowerCase())
       );
       setSuggestions(filteredItems);
@@ -22,7 +22,7 @@ const SearchBar = () => {
 
   return (
     <div className="relative">
-      <div className="flex items-center bg-white shadow-sm rounded-lg overflow-hidden">
+      <div className="flex items-center bg-white shadow-sm rounded-lg transition duration-300 hover:scale-110 overflow-hidden">
         <div className="px-3">
           <FaSearch className="text-gray-400" />
         </div>
