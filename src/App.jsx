@@ -1,11 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 
-import Header from './Component/Header';
-import Home from './Component/Home';
-import About from './Component/About';
-import Accordion from './Component/Accordion';
-import Contact from './Component/Contact';
+import Header from './components/Header';
+import About from './pages/About';
+import Accordion from './components/Accordion';
+import Contact from './pages/Contact';
 import './App.css';
+import CardDetail from './components/CardDetail';
+import CardSection from './components/CardSection';
 
 function App() {
   return (
@@ -14,11 +15,19 @@ function App() {
       <Routes>
       
 
-        <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About  />} />
         <Route path="/service" element={<Accordion  />} />
         <Route path="/Contact" element={<Contact  />} />
+        
+        <Route path="/" element={<CardSection />} />
+
+
+        <Route path="/card/:id" element={<CardDetail />}/>
+
+      
+        
       </Routes>
+
     </>
   );
 }
