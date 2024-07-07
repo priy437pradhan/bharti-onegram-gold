@@ -9,7 +9,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-orange-100 text-orange-400 shadow-md">
+    <header className="sticky top-0 left-0 bg-orange-100 text-orange-400 shadow-md z-10 w-full">
       <div className="container mx-auto flex justify-between items-center p-4">
         <a href="/" className="text-4xl font-bold text-orange-500">BHARATI</a>
         <div className="p-4">

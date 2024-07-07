@@ -15,7 +15,7 @@ const Cards = ({ id, title, price, imageUrl, material }) => {
             <span className="py-2">{material}</span>
           </div>
         </div>
-        <div className="px-6 py-4 relative z-10">
+        <div className="px-6 py-4 relative z-1">
           <div className="font-500 text-m mb-2">{title}</div>
           <p className="text-gray-700 text-base">${price}</p>
         </div>
