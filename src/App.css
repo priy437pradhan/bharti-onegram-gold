@@ -24,17 +24,22 @@
   
   .c-responsive-image-sc {
     position: relative;
-    overflow: hidden;
+   
     height: 268px; 
     width: 98%;
     object-fit: cover;
     transition: height 0.3s ease; 
+   
   }
-  
+  .c-responsive-image-sc.h-expanded {
+    z-index: -1;
+    
+  }
   .responsive-image-sc {
     height: 168px; 
     width: 100%;
     object-fit: cover;
+  
   }
   
   @media (min-width: 992px) {
@@ -48,12 +53,16 @@
   }
   
   .h-expanded {
-    height: 480px !important; 
+    height: 80vh !important; 
   }
   .hi-expanded {
-    height: 380px !important;
+    height: 80vh !important;
+ 
   }
-  
+  .btn-mt-2{
+    margin-top: -100px!important;
+    z-index: 10!important;
+  }
   .mainLogo{
     height: 60px;
     width: auto;

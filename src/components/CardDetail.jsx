@@ -66,7 +66,7 @@ const CardDetail = () => {
           <p className="text-gray-700 text-base">${card.price}</p>
         </div>
       </div>
-      <p className="relative max-w-xs rounded overflow-hidden m-4">{card.define}</p>
+    <div className={`shareOrder ${isExpanded ? 'btn-mt-2' : ''}`}>
       <button
         onClick={handleShare}
         className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 mx-4"
@@ -79,7 +79,9 @@ const CardDetail = () => {
       >
         Order
       </button>
+    
       <OrderCard />
+      </div>
     </>
   );
 };
