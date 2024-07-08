@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Cards = ({ id, title, price, imageUrl, material }) => {
   return (
 
-    <a href={`/card/${id}`}>
+    <a href={`/${id}`}>
       <div className="card-hover relative max-w-xs rounded overflow-hidden shadow-lg m-4 group cursor-pointer" style={{  width: '200px' }}>
         <div className="relative">
           <img

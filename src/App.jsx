@@ -7,7 +7,7 @@ import Contact from './pages/Contact';
 import './App.css';
 import CardDetail from './components/CardDetail';
 import CardSection from './pages/CardSection';
-
+// import baseURL from './config';
 function App() {
   return (
     <>
@@ -23,7 +23,7 @@ function App() {
 
 
 
-        <Route path="/card/:id" element={<CardDetail />}/>
+        <Route path="/:id" element={<CardDetail />}/>
 
       
         
