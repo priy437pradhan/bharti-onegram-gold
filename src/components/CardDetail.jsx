@@ -48,7 +48,7 @@ const CardDetail = () => {
   return (
     <>
       <div
-        className={`c-responsive-image-sc relative rounded overflow-hidden shadow-lg lg:m-4 my-4 mx-1 group cursor-pointer lg:float-left ${isExpanded ? 'h-expanded' : ''}`}
+        className={`c-responsive-image-sc relative rounded overflow-hidden shadow-lg lg:m-4 my-4 mx-1 group cursor-pointer lg:float-left ${isExpanded ? 'h-expanded hi-expanded' : ''}`}
         onClick={toggleExpand}
       >
         <div className="relative">
@@ -66,21 +66,20 @@ const CardDetail = () => {
           <p className="text-gray-700 text-base">${card.price}</p>
         </div>
       </div>
-    <div className={`shareOrder ${isExpanded ? 'btn-mt-2' : ''}`}>
-      <button
-        onClick={handleShare}
-        className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 mx-4"
-      >
-        Share
-      </button>
-      <button
-        onClick={handleOrder}
-        className="mt-4 bg-green-700 text-white py-2 px-4 rounded hover:bg-green-600 transition duration-300 mx-4"
-      >
-        Order
-      </button>
-    
-      <OrderCard />
+      <div className={`shareOrder ${isExpanded ? 'btn-mt-2' : ''}`}>
+        <button
+          onClick={handleShare}
+          className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 mx-4"
+        >
+          Share
+        </button>
+        <button
+          onClick={handleOrder}
+          className="mt-4 bg-green-700 text-white py-2 px-4 rounded hover:bg-green-600 transition duration-300 mx-4"
+        >
+          Order
+        </button>
+        <OrderCard />
       </div>
     </>
   );

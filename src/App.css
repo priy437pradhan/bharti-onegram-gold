@@ -63,6 +63,15 @@
     margin-top: -100px!important;
     z-index: 10!important;
   }
+  @media (min-width: 1024px) {
+    .c-responsive-image-sc.hi-expanded,
+    .c-responsive-image-sc.h-expanded,
+    .btn-mt-2 {
+      height: auto !important;
+      margin-top: 0 !important;
+      z-index: 1 !important;
+    }
+  }
   .mainLogo{
     height: 60px;
     width: auto;
