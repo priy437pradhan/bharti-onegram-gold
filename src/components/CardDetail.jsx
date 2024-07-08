@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import '../App.css'
+import '../App.css';
 import { jewelleryData } from '../lib/jewelleryData';
 
 const CardDetail = () => {
@@ -24,6 +24,13 @@ const CardDetail = () => {
     }
   };
 
+  const handleOrder = () => {
+    const orderUrl = `https://wa.me/9861667624?text=${encodeURIComponent(
+      `Hello, I am interested in the ${card.title}.\n\nCheck it out here: ${window.location.href}`
+    )}`;
+    window.open(orderUrl, '_blank');
+  };
+
   if (!card) {
     return (
       <div className="max-w-2xl mx-auto p-4">
@@ -31,7 +38,7 @@ const CardDetail = () => {
       </div>
     );
   }
- 
+
   return (
     <>
       <div className="c-responsive-image-sc relative rounded overflow-hidden shadow-lg lg:m-4 my-4 mx-1 group cursor-pointer">
@@ -56,6 +63,12 @@ const CardDetail = () => {
         className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 mx-4"
       >
         Share
+      </button>
+      <button 
+        onClick={handleOrder} 
+        className="mt-4 bg-green-700 text-white py-2 px-4 rounded hover:bg-green-600 transition duration-300 mx-4"
+      >
+        Order
       </button>
     </>
   );
