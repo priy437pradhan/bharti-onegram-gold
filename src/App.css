@@ -22,3 +22,26 @@
     animation: slideInLeft 0.5s forwards;
   }
   
+  .c-responsive-image-sc{
+    height: 268px;
+    width: 98%;
+    object-fit: cover;
+  }
+  .responsive-image-sc {
+    height: 168px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  @media (min-width: 992px) {
+    .c-responsive-image-sc{
+      height: 400px;
+      width: 50%;
+      object-fit: cover;
+    }
+    .responsive-image-sc {
+      width: 100%;
+      height: 300px;
+    }
+  }
+  

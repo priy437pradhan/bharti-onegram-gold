@@ -1,10 +1,28 @@
 import { useParams } from 'react-router-dom';
+import '../App.css'
 import { jewelleryData } from '../lib/jewelleryData';
 
 const CardDetail = () => {
-  console.log("cardDetail")
+  console.log("cardDetail");
   const { id } = useParams();
   const card = jewelleryData.find((card) => card.id === id); 
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: card.title,
+          text: `Check out this ${card.title} at our store!`,
+          url: window.location.href,
+        });
+        console.log('Content shared successfully');
+      } catch (error) {
+        console.error('Error sharing the content:', error);
+      }
+    } else {
+      alert('Web Share API is not supported in your browser.');
+    }
+  };
 
   if (!card) {
     return (
@@ -13,14 +31,15 @@ const CardDetail = () => {
       </div>
     );
   }
-
+ 
   return (
-    <div className="relative max-w-xs rounded overflow-hidden shadow-lg m-4 group cursor-pointer" style={{  width: '200px' }}>
+    <>
+      <div className="c-responsive-image-sc relative rounded overflow-hidden shadow-lg lg:m-4 my-4 mx-1 group cursor-pointer">
         <div className="relative">
           <img
             src={card.imageUrl}
             alt={card.title}
-            style={{ height: '168px', width: '200px', objectFit: 'cover' }}
+            className="responsive-image-sc"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent flex items-center justify-center text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
             <span className="py-2">{card.material}</span>
@@ -31,9 +50,15 @@ const CardDetail = () => {
           <p className="text-gray-700 text-base">${card.price}</p>
         </div>
       </div>
+      <p className="relative max-w-xs rounded overflow-hidden m-4">{card.define}</p>
+      <button 
+        onClick={handleShare} 
+        className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 mx-4"
+      >
+        Share
+      </button>
+    </>
   );
 };
-
-
 
 export default CardDetail;
