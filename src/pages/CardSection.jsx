@@ -1,7 +1,7 @@
 import { jewelleryData } from '../lib/jewelleryData';
-import Card from '../components/MyCard';
+import Card from '../components/BorderedSqrCard';
 import { chainData } from '../lib/Chain';
-import ChainCard from '../components/ChainCard';
+import ChainCard from '../components/PlainSqrCard';
 
 const CardSection = () => {
   return (

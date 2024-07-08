@@ -19,6 +19,7 @@ const ChainCards = ({ id, title, price, imageUrl, material }) => {
           <div className="font-500 text-m mb-2">{title}</div>
           <p className="text-gray-700 text-base">{price}</p>
         </div>
+        
       </div>
     </a>
   );

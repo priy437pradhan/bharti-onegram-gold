@@ -23,9 +23,7 @@
     }
   }
   
-  .material-text {
-    animation: slideInLeft 0.5s forwards;
-  }
+ 
   
   .c-responsive-image-sc {
     position: relative;
@@ -57,20 +55,11 @@
     background: linear-gradient(to top, black, transparent, transparent);
   }
   
-  .group-hover\:opacity-100 {
-    opacity: 1;
-  }
+ 
   
-  .materialCard span {
-    display: none;
-  }
   
-  .materialCard.gradient-bottom-to-top span {
-    display: block;
-    text-align: left;
-    font-size: 22px;
-    font-weight: 500;
-  }
+  
+  
   
   @media (min-width: 1024px) {
     .c-responsive-image-sc {
@@ -89,6 +78,16 @@
      
       object-fit: cover;
   }
+
   }
  
-  
+  .BorderedSqrCard{
+    border-radius: 10px;
+    border:4px solid #d1cccc;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    padding: 5px;
+  }
+  .BorderedSqrCard img{
+    border-radius: 5px;
+  }
+ 
