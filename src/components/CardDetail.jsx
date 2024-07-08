@@ -1,12 +1,13 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../App.css';
 import { jewelleryData } from '../lib/jewelleryData';
 import OrderCard from './OrderCard';
 
 const CardDetail = () => {
-  console.log("cardDetail");
   const { id } = useParams();
-  const card = jewelleryData.find((card) => card.id === id); 
+  const [isExpanded, setIsExpanded] = useState(false);
+  const card = jewelleryData.find((card) => card.id === id);
 
   const handleShare = async () => {
     if (navigator.share) {
@@ -32,6 +33,10 @@ const CardDetail = () => {
     window.open(orderUrl, '_blank');
   };
 
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   if (!card) {
     return (
       <div className="max-w-2xl mx-auto p-4">
@@ -42,12 +47,15 @@ const CardDetail = () => {
 
   return (
     <>
-      <div className="c-responsive-image-sc relative rounded overflow-hidden shadow-lg lg:m-4 my-4 mx-1 group cursor-pointer lg:float-left">
+      <div
+        className={`c-responsive-image-sc relative rounded overflow-hidden shadow-lg lg:m-4 my-4 mx-1 group cursor-pointer lg:float-left ${isExpanded ? 'h-expanded' : ''}`}
+        onClick={toggleExpand}
+      >
         <div className="relative">
           <img
             src={card.imageUrl}
             alt={card.title}
-            className="responsive-image-sc"
+            className={`responsive-image-sc ${isExpanded ? 'hi-expanded' : ''}`}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent flex items-center justify-center text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
             <span className="py-2">{card.material}</span>
@@ -59,14 +67,14 @@ const CardDetail = () => {
         </div>
       </div>
       <p className="relative max-w-xs rounded overflow-hidden m-4">{card.define}</p>
-      <button 
-        onClick={handleShare} 
+      <button
+        onClick={handleShare}
         className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 mx-4"
       >
         Share
       </button>
-      <button 
-        onClick={handleOrder} 
+      <button
+        onClick={handleOrder}
         className="mt-4 bg-green-700 text-white py-2 px-4 rounded hover:bg-green-600 transition duration-300 mx-4"
       >
         Order
