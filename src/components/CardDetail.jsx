@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import '../App.css';
 import { jewelleryData } from '../lib/jewelleryData';
+import OrderCard from './OrderCard';
 
 const CardDetail = () => {
   console.log("cardDetail");
@@ -41,7 +42,7 @@ const CardDetail = () => {
 
   return (
     <>
-      <div className="c-responsive-image-sc relative rounded overflow-hidden shadow-lg lg:m-4 my-4 mx-1 group cursor-pointer">
+      <div className="c-responsive-image-sc relative rounded overflow-hidden shadow-lg lg:m-4 my-4 mx-1 group cursor-pointer lg:float-left">
         <div className="relative">
           <img
             src={card.imageUrl}
@@ -70,6 +71,7 @@ const CardDetail = () => {
       >
         Order
       </button>
+      <OrderCard />
     </>
   );
 };

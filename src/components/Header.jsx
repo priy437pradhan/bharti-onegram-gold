@@ -1,5 +1,7 @@
 import { useState } from 'react';
 // import SearchBar from './SearchBar';
+import mainLogo from '../assets/mainLogo.png';
+import '../App.css';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,9 +11,10 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 left-0 bg-orange-100 text-orange-400 shadow-md z-10 w-full">
+    <header className="sticky top-0 left-0 bg-gray-800 text-orange-400 shadow-md z-10 w-full">
       <div className="container mx-auto flex justify-between items-center p-4">
-        <a href="/" className="text-4xl font-bold text-orange-500">BHARATI</a>
+        
+        <a href="/"><img src={mainLogo} alt="" className='mainLogo'/></a>
         <div className="p-4">
       {/* <SearchBar /> */}
         </div>

@@ -45,3 +45,8 @@
     }
   }
   
+  .mainLogo{
+    height: 60px;
+    width: auto;
+    object-fit: cover;
+  }
