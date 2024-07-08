@@ -1,13 +1,21 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import '../App.css';
+
 import { jewelleryData } from '../lib/jewelleryData';
+import { chainData } from '../lib/Chain'; // Correct import
+
 import OrderCard from './OrderCard';
+import '../App.css';
 
 const CardDetail = () => {
   const { id } = useParams();
   const [isExpanded, setIsExpanded] = useState(false);
-  const card = jewelleryData.find((card) => card.id === id);
+
+  let card = jewelleryData.find((card) => card.id === id) || {};
+  const Chaincard = chainData.find((Chaincard) => Chaincard.id === id) || {};
+
+  // Combine the card and Chaincard objects
+  card = { ...card, ...Chaincard };
 
   const handleShare = async () => {
     if (navigator.share) {
@@ -34,10 +42,12 @@ const CardDetail = () => {
   };
 
   const toggleExpand = () => {
+    console.log('toggleExpand called');
     setIsExpanded(!isExpanded);
+    console.log('isExpanded:', !isExpanded);
   };
 
-  if (!card) {
+  if (!card.title) {
     return (
       <div className="max-w-2xl mx-auto p-4">
         <p>Card not found</p>
@@ -57,13 +67,13 @@ const CardDetail = () => {
             alt={card.title}
             className={`responsive-image-sc ${isExpanded ? 'hi-expanded' : ''}`}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent flex items-center justify-center text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+          <div className={`materialCard absolute inset-0 ${isExpanded ? 'gradient-bottom-to-top' : 'bg-gradient-to-r from-black via-transparent to-transparent'} flex items-center p-4 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100`}>
             <span className="py-2">{card.material}</span>
           </div>
         </div>
-        <div className="px-6 py-4 relative z-10">
+        <div className="px-4 py-4 relative z-10">
           <div className="font-500 text-m mb-2">{card.title}</div>
-          <p className="text-gray-700 text-base">${card.price}</p>
+          <p className="text-gray-700 text-base">{card.price}</p>
         </div>
       </div>
       <div className={`shareOrder ${isExpanded ? 'btn-mt-2' : ''}`}>

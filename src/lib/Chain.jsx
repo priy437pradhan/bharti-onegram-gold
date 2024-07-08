@@ -1,61 +1,27 @@
-import J2Image from '../assets/j-2.jpg';
+import c1Image from '../assets/j-1.jpg';
+import c2Image from '../assets/j-2.jpg';
+import c3Image from '../assets/j-3.jpg';
 
-export const chainData = [
-  {
-    id: "1",
-    title: 'Gold Bracelet',
-    price: 800,
-    imageUrl: J2Image,
-    material: '24K Gold'
-  },
-  {
-    id: "2",
-    title: 'Gold Bracelet',
-    price: 800,
-    imageUrl: J2Image,
-    material: '24K Gold'
-  },
-  {
-    id: "3",
-    title: 'Silver Earrings',
-    price: 120,
-    imageUrl: J2Image ,
-    material: 'Sterling Silver'
-  },
+export const chainData= [
   {
     id: "4",
-    title: 'Gold Bracelet',
+    title: 'chain',
     price: 800,
-    imageUrl: J2Image,
+    imageUrl: c1Image,
     material: '24K Gold'
   },
   {
     id: "5",
-    title: 'Gold Bracelet',
+    title: 'chain s-2',
     price: 800,
-    imageUrl: J2Image,
+    imageUrl: c2Image,
     material: '24K Gold'
   },
-  
   {
     id: "6",
-    title: 'Gold Bracelet',
-    price: 800,
-    imageUrl: J2Image,
-    material: '24K Gold'
-  },
-  {
-    id: "7",
-    title: 'Gold Bracelet',
-    price: 800,
-    imageUrl: J2Image,
-    material: '24K Gold'
-  },
-  {
-    id: "8",
-    title: 'Gold Bracelet',
-    price: 800,
-    imageUrl: J2Image,
-    material: '24K Gold'
-  },
+    title: 'chain s-3',
+    price: 120,
+    imageUrl: c3Image ,
+    material: 'Sterling Silver'
+  }
 ];

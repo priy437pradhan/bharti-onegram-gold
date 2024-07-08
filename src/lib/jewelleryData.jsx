@@ -5,7 +5,7 @@ import J3Image from '../assets/j-3.jpg';
 export const jewelleryData = [
   {
     id: "1",
-    title: 'Diamond Necklace',
+    title: 'Necklace gold s1',
     price: 2500,
     imageUrl: J1Image,
     material: 'Diamond and Gold',
@@ -13,59 +13,18 @@ export const jewelleryData = [
   },
   {
     id: "2",
-    title: 'Gold Bracelet',
-    price: 800,
+    title: 'Necklace gold s2',
+    price: 2800,
     imageUrl: J2Image,
     material: '24K Gold',
     define:'lorem Sterling Silver'
   },
   {
     id: "3",
-    title: 'Silver Earrings',
-    price: 120,
+    title: 'Necklace gold st2',
+    price: 11220,
     imageUrl: J3Image ,
     material: 'Sterling Silver',
     define:'lorem Sterling Silver'
-  },
-  {
-    id: "4",
-    title: 'Silver Earrings',
-    price: 120,
-    imageUrl: J3Image ,
-    material: 'Sterling Silver',
-    define:'lorem Sterling Silver'
-  },
-  {
-    id: "5",
-    title: 'Silver Earrings',
-    price: 120,
-    imageUrl: J3Image ,
-    material: 'Sterling Silver',
-    define:'lorem Sterling Silver'
-  },
-  
-  {
-    id: "6",
-    title: 'Silver Earrings',
-    price: 120,
-    imageUrl: J3Image ,
-    material: 'Sterling Silver',
-    define:'lorem Sterling Silver'
-  },
-  {
-    id: "7",
-    title: 'Silver Earrings',
-    price: 120,
-    imageUrl: J3Image ,
-    material: 'Sterling Silver',
-    define:'lorem Sterling Silver'
-  },
-  {
-    id: "8",
-    title: 'Silver Earrings',
-    price: 120,
-    imageUrl: J3Image ,
-    material: 'Sterling Silver',
-    define:'lorem Sterling Silver'
-  },
+  }
 ];

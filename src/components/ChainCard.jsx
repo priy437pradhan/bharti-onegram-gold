@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Cards = ({ id, title, price, imageUrl, material }) => {
+const ChainCards = ({ id, title, price, imageUrl, material }) => {
   return (
 
     <a href={`/${id}`}>
@@ -11,7 +11,7 @@ const Cards = ({ id, title, price, imageUrl, material }) => {
             alt={title}
             style={{ height: '168px', width: '200px', objectFit: 'cover' }}
           />
-          <div className="materialCard absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent flex items-center p-4 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+          <div className="materialCard absolute inset-0 bg-gradient-to-r flex items-center p-4 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
             <span className="py-2">{material}</span>
           </div>
         </div>
@@ -24,7 +24,7 @@ const Cards = ({ id, title, price, imageUrl, material }) => {
   );
 };
 
-Cards.propTypes = {
+ChainCards.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
@@ -32,4 +32,4 @@ Cards.propTypes = {
   material: PropTypes.string.isRequired,
 };
 
-export default Cards;
+export default ChainCards;

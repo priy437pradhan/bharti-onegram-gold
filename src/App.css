@@ -1,12 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.mainLogo {
+  height: 70px;
+  width: auto;
+ 
+  object-fit: cover;
+}
 .card-hover:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
   }
-  /* Custom CSS */
+
 @keyframes slideInLeft {
     0% {
       transform: translateX(-100%);
@@ -24,58 +29,66 @@
   
   .c-responsive-image-sc {
     position: relative;
-   
-    height: 268px; 
+    height: 268px;
     width: 98%;
     object-fit: cover;
-    transition: height 0.3s ease; 
-   
+    transition: height 0.3s ease;
   }
+  
   .c-responsive-image-sc.h-expanded {
-    z-index: -1;
-    
+    height: 70vh !important;
   }
+  
   .responsive-image-sc {
-    height: 168px; 
+    height: 168px;
     width: 100%;
     object-fit: cover;
-  
   }
   
-  @media (min-width: 992px) {
+  .hi-expanded {
+    height: 70vh !important;
+  }
+  
+  .btn-mt-2 {
+    margin-top: -10px !important;
+  }
+  
+  .gradient-bottom-to-top {
+    background: linear-gradient(to top, black, transparent, transparent);
+  }
+  
+  .group-hover\:opacity-100 {
+    opacity: 1;
+  }
+  
+  .materialCard span {
+    display: none;
+  }
+  
+  .materialCard.gradient-bottom-to-top span {
+    display: block;
+    text-align: left;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  
+  @media (min-width: 1024px) {
     .c-responsive-image-sc {
-      height: 400px; 
+      height: 400px;
       width: 50%;
     }
     .responsive-image-sc {
-      height: 300px; 
+      height: 300px;
     }
   }
   
-  .h-expanded {
-    height: 80vh !important; 
+  @media (max-width: 600px) {
+    .mainLogo {
+      height: 50px;
+      width: auto;
+     
+      object-fit: cover;
   }
-  .hi-expanded {
-    height: 80vh !important;
+  }
  
-  }
-  .btn-mt-2{
-    margin-top: -100px!important;
-    z-index: 10!important;
-  }
-  @media (min-width: 1024px) {
-    .c-responsive-image-sc.hi-expanded,
-    .c-responsive-image-sc.h-expanded,
-    .btn-mt-2 {
-      height: auto !important;
-      margin-top: 0 !important;
-      z-index: 1 !important;
-    }
-  }
-  .mainLogo{
-    height: 60px;
-    width: auto;
-    object-fit: cover;
-  }
-
   
