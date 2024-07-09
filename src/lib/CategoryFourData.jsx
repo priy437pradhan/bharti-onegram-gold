@@ -1,53 +1,53 @@
-import image1 from '../assets/jewellery-set.jpg'
+import image1 from '../assets/ear-ring.jpg'
 
-export const CategoryOneData = [
+export const CategoryFourData = [
   { 
-    id:'jewelleryset1',
+    id:'ear-ring1',
     title: 'Card 1', 
     imageUrl:image1,
     price:2500,
   },
 
   { 
-    id:'jewelleryset2',
+    id:'ear-ring2',
     title: 'Card 2', 
     imageUrl:image1,
     price:2500,
    },
 
   { 
-    id:'jewelleryset3',
+    id:'ear-ring3',
     title: 'Card 3',  
     imageUrl:image1,
     price:2500,
   },
   { 
-    id:'jewelleryset4',
+    id:'ear-ring4',
     title: 'Card 4',  
     imageUrl:image1,
     price:2500,
   },
 
   {
-    id:'jewelleryset5',
+    id:'ear-ring5',
     title: 'Card 5',  
     imageUrl:image1,
     price:2500,
   },
   { 
-    id:'jewelleryset6',
+    id:'ear-ring6',
     title: 'Card 6',  
     imageUrl:image1,
     price:2500,
   },
   { 
-    id:'jewelleryset7',
+    id:'ear-ring7',
     title: 'Card 7',  
     imageUrl:image1,
     price:2500,
   },
   {
-    id:'jewelleryset8',
+    id:'ear-ring8',
     title: 'Card 8',  
     imageUrl:image1,
     price:2500,

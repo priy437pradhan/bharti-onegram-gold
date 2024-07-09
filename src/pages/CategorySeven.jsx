@@ -1,10 +1,10 @@
 import MainCatCard from '../components/MainCatCard';
-import { CategoryOneData } from '../lib/CategoryOneData';
+import { CategorySevenData } from '../lib/CategorySevenData';
 
-function CategoryOne() {
+function CategorySeven() {
   return (
     <div className="flex flex-wrap justify-start">
-      {CategoryOneData.map((card, index) => (
+      {CategorySevenData.map((card, index) => (
         <div key={index} className="w-1/2 p-2">
           <MainCatCard
            key={card.id} 
@@ -19,4 +19,4 @@ function CategoryOne() {
   );
 }
 
-export default CategoryOne;
+export default CategorySeven;

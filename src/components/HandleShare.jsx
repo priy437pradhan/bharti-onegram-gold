@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 const HandleShare = ({ card }) => {
     const handleShare = async () => {
       if (navigator.share) {
@@ -19,12 +20,14 @@ const HandleShare = ({ card }) => {
     return (
       <button
         onClick={handleShare}
-        className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
+        className="bg-blue-500 text-white py-2 px-4 mr-2 rounded hover:bg-blue-700 transition duration-300"
       >
         Share
       </button>
     );
   };
-  
+  HandleShare.propTypes = {
+    title: PropTypes.string.isRequired,
+  };
   export default HandleShare;
   

@@ -1,53 +1,53 @@
-import image1 from '../assets/jewellery-set.jpg'
+import image1 from '../assets/brecelets.jpg'
 
-export const CategoryOneData = [
+export const CategoryThreeData = [
   { 
-    id:'jewelleryset1',
+    id:'Brecelets1',
     title: 'Card 1', 
     imageUrl:image1,
     price:2500,
   },
 
   { 
-    id:'jewelleryset2',
+    id:'Brecelets2',
     title: 'Card 2', 
     imageUrl:image1,
     price:2500,
    },
 
   { 
-    id:'jewelleryset3',
+    id:'Brecelets3',
     title: 'Card 3',  
     imageUrl:image1,
     price:2500,
   },
   { 
-    id:'jewelleryset4',
+    id:'Brecelets4',
     title: 'Card 4',  
     imageUrl:image1,
     price:2500,
   },
 
   {
-    id:'jewelleryset5',
+    id:'Brecelets5',
     title: 'Card 5',  
     imageUrl:image1,
     price:2500,
   },
   { 
-    id:'jewelleryset6',
+    id:'Brecelets6',
     title: 'Card 6',  
     imageUrl:image1,
     price:2500,
   },
   { 
-    id:'jewelleryset7',
+    id:'Brecelets7',
     title: 'Card 7',  
     imageUrl:image1,
     price:2500,
   },
   {
-    id:'jewelleryset8',
+    id:'Brecelets8',
     title: 'Card 8',  
     imageUrl:image1,
     price:2500,
