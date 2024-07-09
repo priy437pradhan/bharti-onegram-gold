@@ -1,23 +1,20 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { jewelleryData } from '../lib/jewelleryData';
-import { chainData } from '../lib/Chain'; 
+import { CatagoryOneData } from '../lib/CategoryOneData';
 
-import HandleShare from './HandleShare';
-import HandleOrder from './HandleOrder';
-import OrderCard from './OrderCard';
+import HandleShare from '../components/HandleShare';
+import HandleOrder from '../components/HandleOrder';
+import OrderCard from '../components/OrderCard';
 import '../App.css';
 
 const CardDetail = () => {
   const { id } = useParams();
   const [isExpanded, setIsExpanded] = useState(false);
 
-  let card = jewelleryData.find((card) => card.id === id) || {};
-  const Chaincard = chainData.find((Chaincard) => Chaincard.id === id) || {};
+  const categoryItem = CatagoryOneData.find((item) => item.id === id) || {};
 
-
-  card = { ...card, ...Chaincard };
+  const card = {...categoryItem };
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);

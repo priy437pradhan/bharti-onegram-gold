@@ -19,7 +19,7 @@ const HandleShare = ({ card }) => {
     return (
       <button
         onClick={handleShare}
-        className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 mx-4"
+        className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
       >
         Share
       </button>

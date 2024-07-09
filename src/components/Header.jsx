@@ -19,7 +19,6 @@ const Header = () => {
       {/* <SearchBar /> */}
         </div>
         <nav className="hidden md:flex space-x-6">
-          <a href="CardSection" className="hover:text-orange-500 transition-colors duration-200">All Items</a>
           <a href="about" className="hover:text-orange-500 transition-colors duration-200">About</a>
           <a href="service" className="hover:text-orange-500 transition-colors duration-200">Services</a>
           <a href="contact" className="hover:text-orange-500 transition-colors duration-200">Contact</a>
@@ -37,7 +36,6 @@ const Header = () => {
         </div>
       </div>
       <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-gray-800`}>
-        <a href="CardSection" className="block px-4 py-2 hover:bg-gray-700 transition-colors duration-200">All Items</a>
         <a href="about" className="block px-4 py-2 hover:bg-gray-700 transition-colors duration-200">About</a>
         <a href="service" className="block px-4 py-2 hover:bg-gray-700 transition-colors duration-200">Services</a>
         <a href="contact" className="block px-4 py-2 hover:bg-gray-700 transition-colors duration-200">Contact</a>
