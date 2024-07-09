@@ -83,11 +83,15 @@
  
   .BorderedSqrCard{
     border-radius: 10px;
-    border:4px solid #d1cccc;
+    border:2px solid #d1cccc;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     padding: 5px;
   }
   .BorderedSqrCard img{
     border-radius: 5px;
   }
+ .boxShadow{
+  box-shadow:0 2px 13px 3px rgba(0, 0, 0, 0.3);
+ }
+
  

@@ -1,7 +1,7 @@
 // src/components/Accordion.jsx
 import { useState } from 'react';
 
-const AccordionItem = ({ question, answer }) => {
+const ServicesItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ const AccordionItem = ({ question, answer }) => {
   );
 };
 
-const Accordion = () => {
+const Services = () => {
   const faqItems = [
     {
       question: "What is one-gram gold jewelry?",
@@ -65,7 +65,7 @@ const Accordion = () => {
   return (
     <div className="max-w-2xl mx-auto my-8">
       {faqItems.map((item, index) => (
-        <AccordionItem
+        <ServicesItem
           key={index}
           question={item.question}
           answer={item.answer}
@@ -75,4 +75,4 @@ const Accordion = () => {
   );
 };
 
-export default Accordion;
+export default Services;

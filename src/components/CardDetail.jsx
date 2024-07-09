@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { jewelleryData } from '../lib/jewelleryData';
-import { chainData } from '../lib/Chain'; // Correct import
+import { chainData } from '../lib/Chain'; 
 
+import HandleShare from './HandleShare';
+import HandleOrder from './HandleOrder';
 import OrderCard from './OrderCard';
 import '../App.css';
 
@@ -14,37 +16,11 @@ const CardDetail = () => {
   let card = jewelleryData.find((card) => card.id === id) || {};
   const Chaincard = chainData.find((Chaincard) => Chaincard.id === id) || {};
 
-  // Combine the card and Chaincard objects
+
   card = { ...card, ...Chaincard };
 
-  const handleShare = async () => {
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: card.title,
-          text: `Check out this ${card.title} at our store!`,
-          url: window.location.href,
-        });
-        console.log('Content shared successfully');
-      } catch (error) {
-        console.error('Error sharing the content:', error);
-      }
-    } else {
-      alert('Web Share API is not supported in your browser.');
-    }
-  };
-
-  const handleOrder = () => {
-    const orderUrl = `https://wa.me/9861667624?text=${encodeURIComponent(
-      `Hello, I am interested in the ${card.title}.\n\nCheck it out here: ${window.location.href}`
-    )}`;
-    window.open(orderUrl, '_blank');
-  };
-
   const toggleExpand = () => {
-    console.log('toggleExpand called');
     setIsExpanded(!isExpanded);
-    console.log('isExpanded:', !isExpanded);
   };
 
   if (!card.title) {
@@ -77,18 +53,8 @@ const CardDetail = () => {
         </div>
       </div>
       <div className={`shareOrder ${isExpanded ? 'btn-mt-2' : ''}`}>
-        <button
-          onClick={handleShare}
-          className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 mx-4"
-        >
-          Share
-        </button>
-        <button
-          onClick={handleOrder}
-          className="mt-4 bg-green-700 text-white py-2 px-4 rounded hover:bg-green-600 transition duration-300 mx-4"
-        >
-          Order
-        </button>
+        <HandleShare card={card} />
+        <HandleOrder card={card} />
         <OrderCard />
       </div>
     </>
