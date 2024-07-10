@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // import SearchBar from './SearchBar';
 import mainLogo from '../assets/mainLogo.png';
 import '../App.css';
 
 const Header = () => {
+  const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -11,10 +13,11 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 left-0  text-orange-400 shadow-md z-10 w-full"  style={{backgroundColor:"#082217" }}>
+    <header className="sticky top-0 left-0  text-orange-400 shadow-md z-20 w-full"  style={{backgroundColor:"#082217" }}>
       <div className="container mx-auto flex justify-between items-center p-4">
         
-        <a href="/"><img src={mainLogo} alt="" className='mainLogo'/></a>
+        <div
+      onClick={() => navigate(`/`)}><img src={mainLogo} alt="" className='mainLogo'/></div>
         <div className="p-4">
       {/* <SearchBar /> */}
         </div>

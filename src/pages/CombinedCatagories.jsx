@@ -2,7 +2,7 @@
 import { useParams } from 'react-router-dom';
 import MainCatCard from '../components/MainCatCard';
 import {CombinedData} from '../lib/CombinedData';
-import FilterSort from '../components//FilterSort';
+import FilterSort from '../components/FilterSort';
 
 function CombinedCategories() {
   

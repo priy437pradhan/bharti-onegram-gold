@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 import '../App.css'
 const MainCatCard = ({ id, title, imageUrl,price}) => {
+  const navigate = useNavigate();
   return (
     <>
-    <a href={`/${id}`}>
+    <div
+      onClick={() => navigate(`/jewellery/${id}`)}>
       <div className="MainCatCard max-w-xs rounded overflow-hidden shadow-lg">
       <img className="w-full" src={imageUrl} alt={title} />
       <div className="CardDescription px-2 py-2">
@@ -12,7 +15,7 @@ const MainCatCard = ({ id, title, imageUrl,price}) => {
         
       </div>
     </div>
-    </a>
+    </div>
     <div className="flex justify-start">
     
     </div>
