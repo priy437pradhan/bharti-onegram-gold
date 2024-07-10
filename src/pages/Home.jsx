@@ -9,15 +9,14 @@ import image8 from '../assets/nose-pin.jpg';
 import Category from '../components/Catagory';
 
 const categories = [
-  { image: image1, link: '/category1', title:"Set" },
-  { image: image2, link: '/category2', title:"Chain" },
-  { image: image3, link: '/category3', title:"Brecelets" },
-  { image: image4, link: '/category4', title:"Ear Ring" },
-  { image: image5, link: '/category5', title:"Ring" },
-  { image: image6, link: '/category6', title:"Bengle" },
-  { image: image7, link: '/category7', title:"Anklet" },
-  { image: image8, link: '/category8', title:"Nose Pin" },
-  
+  { image: image1, link: '/category/CategoryOne', title:"Set" },
+  { image: image2, link: '/category/CategoryTwo', title:"Chain" },
+  { image: image3, link: '/category/CategoryThree', title:"Bracelets" },
+  { image: image4, link: '/category/CategoryFour', title:"Ear Ring" },
+  { image: image5, link: '/category/CategoryFive', title:"Ring" },
+  { image: image6, link: '/category/CategorySix', title:"Bangle" },
+  { image: image7, link: '/category/CategorySeven', title:"Anklet" },
+  { image: image8, link: '/category/CategoryEight', title:"Nose Pin" },
 ];
 
 const Home = () => {

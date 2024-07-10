@@ -4,28 +4,15 @@ import HandleShare from '../components/HandleShare';
 import HandleOrder from '../components/HandleOrder';
 import OrderCard from '../components/OrderCard';
 import '../App.css';
-import { CategoryOneData } from '../lib/CategoryOneData';
-import { CategoryTwoData } from '../lib/CategoryTwoData';
-import { CategoryThreeData } from '../lib/CategoryThreeData';
-import { CategoryFourData } from '../lib/CategoryFourData';
-import { CategoryFiveData } from '../lib/CategoryFiveData';
-import { CategorySixData } from '../lib/CategorySixData';
-import { CategorySevenData } from '../lib/CategorySevenData';
-import { CategoryEightData } from '../lib/CategoryEightData';
+import {CombinedData} from '../lib/CombinedData';
 const CardDetail = () => {
   const { id } = useParams();
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const categoryOneItem = CategoryOneData.find((item) => item.id === id) || {};
-  const categoryTwoItem = CategoryTwoData.find((item) => item.id === id) || {};
-  const categoryThreeItem = CategoryThreeData.find((item) => item.id === id) || {};
-  const categoryFourItem = CategoryFourData.find((item) => item.id === id) || {};
-  const categoryFiveItem = CategoryFiveData.find((item) => item.id === id) || {};
-  const categorySixItem = CategorySixData.find((item) => item.id === id) || {};
-  const categorySevenItem = CategorySevenData.find((item) => item.id === id) || {};
-  const categoryEightItem = CategoryEightData.find((item) => item.id === id) || {};
+  const CombinedDataItem = CombinedData.find((item) => item.id === id) || {};
+  
 
-  const card = {...categoryOneItem, ...categoryTwoItem, ...categoryThreeItem, ...categoryFourItem, ...categoryFiveItem, ...categorySixItem, ...categorySevenItem, ...categoryEightItem,};
+  const card = {...CombinedDataItem };
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
