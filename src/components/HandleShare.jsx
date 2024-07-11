@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 const HandleShare = ({ card }) => {
     const handleShare = async () => {
       if (navigator.share) {
@@ -26,8 +25,6 @@ const HandleShare = ({ card }) => {
       </button>
     );
   };
-  HandleShare.propTypes = {
-    title: PropTypes.string.isRequired,
-  };
+ 
   export default HandleShare;
   

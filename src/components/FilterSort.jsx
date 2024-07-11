@@ -1,9 +1,6 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import {CombinedData} from '../lib/CombinedData';
+import { useState } from 'react';
 
-const FilterSort = () => {
-  const navigate = useNavigate();
+const FilterSort = ({ applyFilters }) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState([]);
 
@@ -17,25 +14,15 @@ const FilterSort = () => {
 
   const handleFilterSelect = (option) => {
     if (selectedFilters.includes(option)) {
-      setSelectedFilters(selectedFilters.filter((item) => item !== option));
+      setSelectedFilters(selectedFilters.filter(item => item !== option));
     } else {
       setSelectedFilters([...selectedFilters, option]);
     }
   };
 
-  const applyFilters = () => {
-    let filtered = CombinedData;
-
-    if (selectedFilters.includes("Option 4")) {
-      filtered = filtered.filter(item => item.price < 1000);
-    } else if (selectedFilters.includes("Option 5")) {
-      filtered = filtered.filter(item => item.price >= 1000 && item.price <= 3000);
-    } else if (selectedFilters.includes("Option 6")) {
-      filtered = filtered.filter(item => item.price > 3000);
-    }
-
-    navigate("/filteredData", { state: { data: filtered, username: "priya" } });
-    closeMenu(); 
+  const handleApplyFilters = () => {
+    applyFilters(selectedFilters);
+    closeMenu();
   };
 
   return (
@@ -43,7 +30,6 @@ const FilterSort = () => {
       <button
         type="button"
         className="inline-flex justify-center w-36 rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-        id="filter-menu"
         aria-expanded={isFilterOpen}
         aria-haspopup="true"
         onClick={openFilterMenu}
@@ -76,8 +62,41 @@ const FilterSort = () => {
                 <input
                   type="checkbox"
                   className="form-checkbox h-4 w-4 text-gray-600"
-                  onChange={() => handleFilterSelect("Option 4")}
-                  checked={selectedFilters.includes("Option 4")}
+                  onChange={() => handleFilterSelect('Option 1')}
+                  checked={selectedFilters.includes('Option 1')}
+                />
+                <span className="ml-2 text-gray-700">20% or more</span>
+              </label>
+            </li>
+            <li className="py-1">
+              <label className="inline-flex items-center">
+                <input
+                  type="checkbox"
+                  className="form-checkbox h-4 w-4 text-gray-600"
+                  onChange={() => handleFilterSelect('Option 2')}
+                  checked={selectedFilters.includes('Option 2')}
+                />
+                <span className="ml-2 text-gray-700">30% or more</span>
+              </label>
+            </li>
+            <li className="py-1">
+              <label className="inline-flex items-center">
+                <input
+                  type="checkbox"
+                  className="form-checkbox h-4 w-4 text-gray-600"
+                  onChange={() => handleFilterSelect('Option 3')}
+                  checked={selectedFilters.includes('Option 3')}
+                />
+                <span className="ml-2 text-gray-700">40% or more</span>
+              </label>
+            </li>
+            <li className="py-1">
+              <label className="inline-flex items-center">
+                <input
+                  type="checkbox"
+                  className="form-checkbox h-4 w-4 text-gray-600"
+                  onChange={() => handleFilterSelect('Option 4')}
+                  checked={selectedFilters.includes('Option 4')}
                 />
                 <span className="ml-2 text-gray-700">Below 1000</span>
               </label>
@@ -87,8 +106,8 @@ const FilterSort = () => {
                 <input
                   type="checkbox"
                   className="form-checkbox h-4 w-4 text-gray-600"
-                  onChange={() => handleFilterSelect("Option 5")}
-                  checked={selectedFilters.includes("Option 5")}
+                  onChange={() => handleFilterSelect('Option 5')}
+                  checked={selectedFilters.includes('Option 5')}
                 />
                 <span className="ml-2 text-gray-700">1000-3000</span>
               </label>
@@ -98,8 +117,8 @@ const FilterSort = () => {
                 <input
                   type="checkbox"
                   className="form-checkbox h-4 w-4 text-gray-600"
-                  onChange={() => handleFilterSelect("Option 6")}
-                  checked={selectedFilters.includes("Option 6")}
+                  onChange={() => handleFilterSelect('Option 6')}
+                  checked={selectedFilters.includes('Option 6')}
                 />
                 <span className="ml-2 text-gray-700">Above 3000</span>
               </label>
@@ -108,12 +127,19 @@ const FilterSort = () => {
           <button
             type="button"
             className="mt-4 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-700 text-base font-medium text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-            onClick={applyFilters}
+            onClick={handleApplyFilters}
           >
             Apply
           </button>
         </div>
       )}
+      <button
+        type="button"
+        className="inline-flex justify-center w-36 rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+        aria-haspopup="true"
+      >
+        Sort
+      </button>
     </div>
   );
 };

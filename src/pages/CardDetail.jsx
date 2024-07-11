@@ -43,6 +43,7 @@ const CardDetail = () => {
         <div className="px-2 py-2 absolute">
           <div className="font-500 text-m mb-2">{card.title}</div>
           <p className="text-gray-700 text-base">{`Rupees : ${card.price}`}</p>
+          <div className="font-600 text-s mb-1" style={{color:"green" }}>{card.discount}</div>
         </div>
       </div>
       <div className={`shareOrder ${isExpanded ? 'btn-mt-2' : ''}`}>

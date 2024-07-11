@@ -1,48 +1,78 @@
-
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import MainCatCard from '../components/MainCatCard';
-import {CombinedData} from '../lib/CombinedData';
+import { CombinedData } from '../lib/CombinedData';
 import FilterSort from '../components/FilterSort';
 
 function CombinedCategories() {
-  
   const { category } = useParams();
+  const [filteredData, setFilteredData] = useState([]);
+  const navigate = useNavigate();
 
-  const data = {
-    'CategoryOne':CombinedData.filter(item => item.category === 'CategoryOne'),
-    'CategoryTwo': CombinedData.filter(item => item.category === 'CategoryTwo'),
-    'CategoryThree': CombinedData.filter(item => item.category === 'CategoryThree'),
-    'CategoryFour': CombinedData.filter(item => item.category === 'CategoryFour'),
-    'CategoryFive': CombinedData.filter(item => item.category === 'CategoryFive'), 
-    'CategorySix': CombinedData.filter(item => item.category === 'CategorySix'), 
-    'CategorySeven': CombinedData.filter(item => item.category === 'CategorySeven'), 
-    'CategoryEight': CombinedData.filter(item => item.category === 'CategorySeven'), };
+  const applyFilters = (selectedFilters) => {
+    let dataToFilter = CombinedData.filter(item => item.category === category);
+    if (selectedFilters.length > 0) {
+      dataToFilter = dataToFilter.filter(item => {
+        let matches = false;
 
-    const categoryData = data[category];
+        if (
+          selectedFilters.includes('Option 1') &&
+          (item.discount === '20%' || item.discount === '30%' || item.discount === '40%')
+        ) {
+          matches = true;
+        } else if (
+          selectedFilters.includes('Option 2') &&
+          (item.discount === '30%' || item.discount === '40%')
+        ) {
+          matches = true;
+        } else if (selectedFilters.includes('Option 3') && item.discount === '40%') {
+          matches = true;
+        }
 
-    if (!categoryData) {
-      return <div>Category not found</div>;
+        if (selectedFilters.includes('Option 4') && item.price < 1000) {
+          matches = true;
+        }
+        if (selectedFilters.includes('Option 5') && item.price >= 1000 && item.price <= 3000) {
+          matches = true;
+        }
+        if (selectedFilters.includes('Option 6') && item.price > 3000) {
+          matches = true;
+        }
+
+        return matches;
+      });
     }
+    setFilteredData(dataToFilter);
+  };
+
+  const dataToDisplay = filteredData.length > 0 ? filteredData : CombinedData.filter(item => item.category === category);
+
+  if (dataToDisplay.length === 0) {
+    return <div className="p-4">Category not found</div>;
+  }
 
   return (
     <>
-    <div className="p-4">
-    <FilterSort  />
-   
-    </div>
-    <div className="flex flex-wrap justify-start">
-      {categoryData.map((card, index) => (
-        <div key={index} className="w-1/2 p-2">
-          <MainCatCard
-            key={card.id}
-            id={card.id}
-            title={card.title}
-            imageUrl={card.imageUrl}
-            price={card.price}
-          />
-        </div>
-      ))}
-    </div>
+      <div className="p-4">
+        <FilterSort applyFilters={applyFilters} />
+      </div>
+      {filteredData.length === 0 && (
+        <div className="p-4">No data found matching the selected filters</div>
+      )}
+      <div className="flex flex-wrap justify-start">
+        {dataToDisplay.map((card, index) => (
+          <div key={index} className="w-1/2 p-2">
+            <MainCatCard
+              key={card.id}
+              id={card.id}
+              title={card.title}
+              imageUrl={card.imageUrl}
+              price={card.price}
+              discount={card.discount}
+            />
+          </div>
+        ))}
+      </div>
     </>
   );
 }

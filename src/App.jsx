@@ -10,8 +10,6 @@ import Contact from './pages/Contact';
 import './App.css';
 
 import CombinedCategories from './pages/CombinedCatagories';
-import FilteredPage from './pages/FilteredPage';
-import FilterSort from './components/FilterSort';
 function App() {
   return (
     <>
@@ -25,8 +23,6 @@ function App() {
         <Route path="/about" element={<About  />} />
         <Route path="/service" element={<Services  />} />
         <Route path="/Contact" element={<Contact  />} /> 
-        <Route path="/FilterSort" element={<FilterSort />} />
-        <Route path="/filteredData" element={<FilteredPage/>} /> 
       </Routes>
 
     </>

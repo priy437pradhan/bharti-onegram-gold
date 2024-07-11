@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import '../App.css'
-const MainCatCard = ({ id, title, imageUrl,price}) => {
+const MainCatCard = ({ id, title, discount, imageUrl,price}) => {
   const navigate = useNavigate();
   return (
     <>
@@ -12,6 +12,7 @@ const MainCatCard = ({ id, title, imageUrl,price}) => {
       <div className="CardDescription px-2 py-2">
         <div className="font-400 text-m mb-1">{title}</div>
         <div className="font-600 text-s mb-1">{`Rupees : ${price}`}</div>
+        <div className="font-600 text-s mb-1" style={{color:"green" }}>{ discount}</div>
         
       </div>
     </div>
@@ -24,11 +25,11 @@ const MainCatCard = ({ id, title, imageUrl,price}) => {
 };
 
 MainCatCard.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   imageUrl: PropTypes.string.isRequired,
-  material: PropTypes.string.isRequired,
+  discount: PropTypes.string.isRequired,
 };
 
 export default MainCatCard;

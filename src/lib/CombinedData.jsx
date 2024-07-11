@@ -15,7 +15,7 @@ export const CombinedData = [
     imageUrl: jewellerySetImage,
     price: 500,
     category: 'CategoryOne',
-    discount :'30%',
+    discount :'10%',
   },
   { 
     id: 'jewelleryset2',
@@ -55,7 +55,7 @@ export const CombinedData = [
     imageUrl: jewellerySetImage,
     price: 2500,
     category: 'CategoryOne',
-    discount :'10%',
+    discount :'30%',
   },
   { 
     id: 'jewelleryset7',
