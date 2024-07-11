@@ -5,6 +5,7 @@ import HandleOrder from '../components/HandleOrder';
 import OrderCard from '../components/OrderCard';
 import '../App.css';
 import {CombinedData} from '../lib/CombinedData';
+import GoBackButton from '../components/GoBackButton';
 const CardDetail = () => {
   const { id } = useParams();
   const [isExpanded, setIsExpanded] = useState(false);
@@ -27,7 +28,8 @@ const CardDetail = () => {
   }
 
   return (
-    <>
+    <div className="p-2">
+      <GoBackButton />
       <div
         className={`c-responsive-image-sc relative rounded overflow-hidden shadow-lg lg:m-4 my-4 mx-1 group cursor-pointer lg:float-left ${isExpanded ? 'h-expanded hi-expanded' : ''}`}
         onClick={toggleExpand}
@@ -46,12 +48,12 @@ const CardDetail = () => {
           <div className="font-600 text-s mb-1" style={{color:"green" }}>{card.discount}</div>
         </div>
       </div>
-      <div className={`shareOrder ${isExpanded ? 'btn-mt-2' : ''}`}>
+      <div className={`shareOrder p-2 ${isExpanded ? 'btn-mt-2' : ''}`}>
         <HandleShare card={card} />
         <HandleOrder card={card} />
         <OrderCard />
       </div>
-    </>
+    </div>
   );
 };
 

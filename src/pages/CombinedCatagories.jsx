@@ -1,29 +1,28 @@
-import { useParams, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import MainCatCard from '../components/MainCatCard';
 import { CombinedData } from '../lib/CombinedData';
 import FilterSort from '../components/FilterSort';
+import GoBackButton from '../components/GoBackButton';
+import HandleOrderTwo from '../components/HandleOrderTwo';
 
 function CombinedCategories() {
   const { category } = useParams();
   const [filteredData, setFilteredData] = useState([]);
-  const navigate = useNavigate();
 
+  useEffect(() => {
+    applyFilters([]);
+  }, [category]);
   const applyFilters = (selectedFilters) => {
     let dataToFilter = CombinedData.filter(item => item.category === category);
+
     if (selectedFilters.length > 0) {
       dataToFilter = dataToFilter.filter(item => {
         let matches = false;
 
-        if (
-          selectedFilters.includes('Option 1') &&
-          (item.discount === '20%' || item.discount === '30%' || item.discount === '40%')
-        ) {
+        if (selectedFilters.includes('Option 1') && (item.discount === '20%' || item.discount === '30%' || item.discount === '40%')) {
           matches = true;
-        } else if (
-          selectedFilters.includes('Option 2') &&
-          (item.discount === '30%' || item.discount === '40%')
-        ) {
+        } else if (selectedFilters.includes('Option 2') && (item.discount === '30%' || item.discount === '40%')) {
           matches = true;
         } else if (selectedFilters.includes('Option 3') && item.discount === '40%') {
           matches = true;
@@ -42,6 +41,7 @@ function CombinedCategories() {
         return matches;
       });
     }
+
     setFilteredData(dataToFilter);
   };
 
@@ -53,12 +53,11 @@ function CombinedCategories() {
 
   return (
     <>
-      <div className="p-4">
+      <div className="p-2">
+        <GoBackButton />
         <FilterSort applyFilters={applyFilters} />
+        <HandleOrderTwo />
       </div>
-      {filteredData.length === 0 && (
-        <div className="p-4">No data found matching the selected filters</div>
-      )}
       <div className="flex flex-wrap justify-start">
         {dataToDisplay.map((card, index) => (
           <div key={index} className="w-1/2 p-2">

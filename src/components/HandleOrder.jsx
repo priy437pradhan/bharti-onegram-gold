@@ -9,7 +9,7 @@ const HandleOrder = ({ card }) => {
     return (
       <button
         onClick={handleOrder}
-        className="mt-4 bg-green-700 text-white py-2 px-4 rounded hover:bg-green-600 transition duration-300"
+        className="mt-4 bg-green-700 text-white py-2 px-4  rounded hover:bg-green-600 transition duration-300"
       >
         Order
       </button>

@@ -9,20 +9,20 @@ import image8 from '../assets/nose-pin.jpg';
 import Category from '../components/Catagory';
 
 const categories = [
-  { image: image1, link: '/category/CategoryOne', title:"Set" },
-  { image: image2, link: '/category/CategoryTwo', title:"Chain" },
-  { image: image3, link: '/category/CategoryThree', title:"Bracelets" },
-  { image: image4, link: '/category/CategoryFour', title:"Ear Ring" },
-  { image: image5, link: '/category/CategoryFive', title:"Ring" },
-  { image: image6, link: '/category/CategorySix', title:"Bangle" },
-  { image: image7, link: '/category/CategorySeven', title:"Anklet" },
-  { image: image8, link: '/category/CategoryEight', title:"Nose Pin" },
+  { image: image1, link: '/category/set', title:"Set" },
+  { image: image2, link: '/category/Chain', title:"Chain" },
+  { image: image3, link: '/category/Bracelets', title:"Bracelets" },
+  { image: image4, link: '/category/Ear-Ring', title:"Ear Ring" },
+  { image: image5, link: '/category/Ring', title:"Ring" },
+  { image: image6, link: '/category/Bangle', title:"Bangle" },
+  { image: image7, link: '/category/Anklet', title:"Anklet" },
+  { image: image8, link: '/category/Nose-Pin', title:"Nose Pin" },
 ];
 
 const Home = () => {
   return (
     <div className="container px-2 py-2">
-      <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-3 sm:grid-cols-2 grid-cols-2">
         {categories.map((category, index) => (
           <Category key={index} image={category.image} link={category.link} title={category.title} />
         ))}

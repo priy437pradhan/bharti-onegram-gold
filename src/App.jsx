@@ -7,6 +7,7 @@ import CardDetail from './pages/CardDetail'
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+
 import './App.css';
 
 import CombinedCategories from './pages/CombinedCatagories';
@@ -23,8 +24,9 @@ function App() {
         <Route path="/about" element={<About  />} />
         <Route path="/service" element={<Services  />} />
         <Route path="/Contact" element={<Contact  />} /> 
+       
       </Routes>
-
+     
     </>
   );
 }

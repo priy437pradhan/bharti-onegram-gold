@@ -14,15 +14,15 @@ export const CombinedData = [
     title: 'Card 1', 
     imageUrl: jewellerySetImage,
     price: 500,
-    category: 'CategoryOne',
-    discount :'10%',
+    category: 'set',
+    discount: '30%',
   },
   { 
     id: 'jewelleryset2',
     title: 'Card 2', 
     imageUrl: jewellerySetImage,
     price: 2500,
-    category: 'CategoryOne',
+    category: 'set',
     discount :'20%',
   },
   { 
@@ -30,7 +30,7 @@ export const CombinedData = [
     title: 'Card 3',  
     imageUrl: jewellerySetImage,
     price: 33500,
-    category: 'CategoryOne',
+    category: 'set',
     discount :'10%',
   },
   { 
@@ -38,7 +38,7 @@ export const CombinedData = [
     title: 'Card 4',  
     imageUrl: jewellerySetImage,
     price: 2500,
-    category: 'CategoryOne',
+    category: 'set',
     discount :'20%',
   },
   { 
@@ -46,7 +46,7 @@ export const CombinedData = [
     title: 'Card 5',  
     imageUrl: jewellerySetImage,
     price: 200,
-    category: 'CategoryOne',
+    category: 'set',
     discount :'10%',
   },
   { 
@@ -54,15 +54,15 @@ export const CombinedData = [
     title: 'Card 6',  
     imageUrl: jewellerySetImage,
     price: 2500,
-    category: 'CategoryOne',
-    discount :'30%',
+    category: 'set',
+    discount :'10%',
   },
   { 
     id: 'jewelleryset7',
     title: 'Card 7',  
     imageUrl: jewellerySetImage,
     price: 2500,
-    category: 'CategoryOne',
+    category: 'set',
     discount :'10%',
   },
   { 
@@ -70,7 +70,7 @@ export const CombinedData = [
     title: 'Card 8',  
     imageUrl: jewellerySetImage,
     price: 2500,
-    category: 'CategoryOne',
+    category: 'set',
     discount :'20%',
   },
   { 
@@ -78,7 +78,7 @@ export const CombinedData = [
     title: 'Card 1', 
     imageUrl: chainImage,
     price: 1500,
-    category: 'CategoryTwo',
+    category: 'Chain',
     discount :'20%',
 
   },
@@ -87,7 +87,7 @@ export const CombinedData = [
     title: 'Card 2', 
     imageUrl: chainImage,
     price: 2200,
-    category: 'CategoryTwo',
+    category: 'Chain',
     discount :'20%',
 
   },
@@ -96,7 +96,7 @@ export const CombinedData = [
     title: 'Card 3',  
     imageUrl: chainImage,
     price: 2500,
-    category: 'CategoryTwo',
+    category: 'Chain',
     discount :'20%',
 
   },
@@ -105,7 +105,7 @@ export const CombinedData = [
     title: 'Card 4',  
     imageUrl: chainImage,
     price: 4500,
-    category: 'CategoryTwo',
+    category: 'Chain',
     discount :'40%',
 
   },
@@ -114,7 +114,7 @@ export const CombinedData = [
     title: 'Card 5',  
     imageUrl: chainImage,
     price: 7500,
-    category: 'CategoryTwo',
+    category: 'Chain',
     discount :'40%',
   },
   { 
@@ -122,7 +122,7 @@ export const CombinedData = [
     title: 'Card 6',  
     imageUrl: chainImage,
     price: 2500,
-    category: 'CategoryTwo',
+    category: 'Chain',
     discount :'40%',
   },
   { 
@@ -130,7 +130,7 @@ export const CombinedData = [
     title: 'Card 7',  
     imageUrl: chainImage,
     price: 2500,
-    category: 'CategoryTwo',
+    category: 'Chain',
     discount :'10%',
   },
   { 
@@ -138,7 +138,7 @@ export const CombinedData = [
     title: 'Card 8',  
     imageUrl: chainImage,
     price: 2500,
-    category: 'CategoryTwo',
+    category: 'Chain',
     discount :'40%',
   },
   { 
@@ -146,7 +146,7 @@ export const CombinedData = [
     title: 'Card 1', 
     imageUrl:brecelets,
     price:2500,
-    category: 'CategoryThree',
+    category: 'Bracelets',
     discount :'20%',
   },
 
@@ -155,7 +155,7 @@ export const CombinedData = [
     title: 'Card 2', 
     imageUrl:brecelets,
     price:2500,
-    category: 'CategoryThree',
+    category: 'Bracelets',
     discount :'25%',
    },
 
@@ -164,14 +164,14 @@ export const CombinedData = [
     title: 'Card 3',  
     imageUrl:brecelets,
     price:2500,
-    category: 'CategoryThree',
+    category: 'Bracelets',
   },
   { 
     id:'Brecelets4',
     title: 'Card 4',  
     imageUrl:brecelets,
     price:2500,
-    category: 'CategoryThree',
+    category: 'Bracelets',
   },
 
   {
@@ -179,35 +179,35 @@ export const CombinedData = [
     title: 'Card 5',  
     imageUrl:brecelets,
     price:2500,
-    category: 'CategoryThree',
+    category: 'Bracelets',
   },
   { 
     id:'Brecelets6',
     title: 'Card 6',  
     imageUrl:brecelets,
     price:2500,
-    category: 'CategoryThree',
+    category: 'Bracelets',
   },
   { 
     id:'Brecelets7',
     title: 'Card 7',  
     imageUrl:brecelets,
     price:2500,
-    category: 'CategoryThree',
+    category: 'Bracelets',
   },
   {
     id:'Brecelets8',
     title: 'Card 8',  
     imageUrl:brecelets,
     price:2500,
-    category: 'CategoryThree',
+    category: 'Bracelets',
   },
   { 
     id:'ear-ring1',
     title: 'Card 1', 
     imageUrl:earRing,
     price:2500,
-    category: 'CategoryFour',
+    category: 'Ear-Ring',
   },
 
   { 
@@ -215,7 +215,7 @@ export const CombinedData = [
     title: 'Card 2', 
     imageUrl:earRing,
     price:2500,
-    category: 'CategoryFour',
+    category: 'Ear-Ring',
    },
 
   { 
@@ -223,14 +223,14 @@ export const CombinedData = [
     title: 'Card 3',  
     imageUrl:earRing,
     price:2500,
-    category: 'CategoryFour',
+    category: 'Ear-Ring',
   },
   { 
     id:'ear-ring4',
     title: 'Card 4',  
     imageUrl:earRing,
     price:2500,
-    category: 'CategoryFour',
+    category: 'Ear-Ring',
   },
 
   {
@@ -238,35 +238,35 @@ export const CombinedData = [
     title: 'Card 5',  
     imageUrl:earRing,
     price:500,
-    category: 'CategoryFour',
+    category: 'Ear-Ring',
   },
   { 
     id:'ear-ring6',
     title: 'Card 6',  
     imageUrl:earRing,
     price:300,
-    category: 'CategoryFour',
+    category: 'Ear-Ring',
   },
   { 
     id:'ear-ring7',
     title: 'Card 7',  
     imageUrl:earRing,
     price:2500,
-    category: 'CategoryFour',
+    category: 'Ear-Ring',
   },
   {
     id:'ear-ring8',
     title: 'Card 8',  
     imageUrl:earRing,
     price:2500,
-    category: 'CategoryFour',
+    category: 'Ear-Ring',
   },
   { 
     id:'ring1',
     title: 'Card 1', 
     imageUrl:ring,
     price:2500,
-    category: 'CategoryFive',
+    category: 'Ring',
   },
 
   { 
@@ -274,7 +274,7 @@ export const CombinedData = [
     title: 'Card 2', 
     imageUrl:ring,
     price:1500,
-    category: 'CategoryFive',
+    category: 'Ring',
    },
 
   { 
@@ -282,14 +282,14 @@ export const CombinedData = [
     title: 'Card 3',  
     imageUrl:ring,
     price:2500,
-    category: 'CategoryFive',
+    category: 'Ring',
   },
   { 
     id:'ring4',
     title: 'Card 4',  
     imageUrl:ring,
     price:2500,
-    category: 'CategoryFive',
+    category: 'Ring',
   },
 
   {
@@ -297,35 +297,35 @@ export const CombinedData = [
     title: 'Card 5',  
     imageUrl:ring,
     price:2500,
-    category: 'CategoryFive',
+    category: 'Ring',
   },
   { 
     id:'ring6',
     title: 'Card 6',  
     imageUrl:ring,
     price:2500,
-    category: 'CategoryFive',
+    category: 'Ring',
   },
   { 
     id:'ring7',
     title: 'Card 7',  
     imageUrl:ring,
     price:2500,
-    category: 'CategoryFive',
+    category: 'Ring',
   },
   {
     id:'ring8',
     title: 'Card 8',  
     imageUrl:ring,
     price:2500,
-    category: 'CategoryFive',
+    category: 'Ring',
   },
   { 
     id:'Bengle1',
     title: 'Card 1', 
     imageUrl:Bengle,
     price:2500,
-    category: 'CategorySix',
+    category: 'Bangle',
   },
 
   { 
@@ -333,7 +333,7 @@ export const CombinedData = [
     title: 'Card 2', 
     imageUrl:Bengle,
     price:2500,
-    category: 'CategorySix',
+    category: 'Bangle',
    },
 
   { 
@@ -341,14 +341,14 @@ export const CombinedData = [
     title: 'Card 3',  
     imageUrl:Bengle,
     price:2500,
-    category: 'CategorySix',
+    category: 'Bangle',
   },
   { 
     id:'Bengle4',
     title: 'Card 4',  
     imageUrl:Bengle,
     price:2500,
-    category: 'CategorySix',
+    category: 'Bangle',
   },
 
   {
@@ -356,35 +356,35 @@ export const CombinedData = [
     title: 'Card 5',  
     imageUrl:Bengle,
     price:2500,
-    category: 'CategorySix',
+    category: 'Bangle',
   },
   { 
     id:'Bengle6',
     title: 'Card 6',  
     imageUrl:Bengle,
     price:2500,
-    category: 'CategorySix',
+    category: 'Bangle',
   },
   { 
     id:'Bengle7',
     title: 'Card 7',  
     imageUrl:Bengle,
     price:2500,
-    category: 'CategorySix',
+    category: 'Bangle',
   },
   {
     id:'Bengle8',
     title: 'Card 8',  
     imageUrl:Bengle,
     price:2500,
-    category: 'CategorySix',
+    category: 'Bangle',
   },
   { 
     id:'Anklet1',
     title: 'Card 1', 
     imageUrl:Anklet,
     price:2500,
-    category: 'CategorySeven',
+    category: 'Anklet',
   },
 
   { 
@@ -392,7 +392,7 @@ export const CombinedData = [
     title: 'Card 2', 
     imageUrl:Anklet,
     price:2500,
-    category: 'CategorySeven',
+    category: 'Anklet',
    },
 
   { 
@@ -400,14 +400,14 @@ export const CombinedData = [
     title: 'Card 3',  
     imageUrl:Anklet,
     price:2500,
-    category: 'CategorySeven',
+    category: 'Anklet',
   },
   { 
     id:'Anklet4',
     title: 'Card 4',  
     imageUrl:Anklet,
     price:2500,
-    category: 'CategorySeven',
+    category: 'Anklet',
   },
 
   {
@@ -415,35 +415,35 @@ export const CombinedData = [
     title: 'Card 5',  
     imageUrl:Anklet,
     price:2500,
-    category: 'CategorySeven',
+    category: 'Anklet',
   },
   { 
     id:'Anklet6',
     title: 'Card 6',  
     imageUrl:Anklet,
     price:2500,
-    category: 'CategorySeven',
+    category: 'Anklet',
   },
   { 
     id:'Anklet7',
     title: 'Card 7',  
     imageUrl:Anklet,
     price:2500,
-    category: 'CategorySeven',
+    category: 'Anklet',
   },
   {
     id:'Anklet8',
     title: 'Card 8',  
     imageUrl:Anklet,
     price:2500,
-    category: 'CategorySeven',
+    category: 'Anklet',
   },
   { 
     id:'nose-pin1',
     title: 'Card 1', 
     imageUrl:nosepin,
     price:2500,
-    category: 'CategoryEight',
+    category: 'Nose-Pin',
   },
 
   { 
@@ -451,7 +451,7 @@ export const CombinedData = [
     title: 'Card 2', 
     imageUrl:nosepin,
     price:2500,
-    category: 'CategoryEight',
+    category: 'Nose-Pin',
    },
 
   { 
@@ -459,14 +459,14 @@ export const CombinedData = [
     title: 'Card 3',  
     imageUrl:nosepin,
     price:2500,
-    category: 'CategoryEight',
+    category: 'Nose-Pin',
   },
   { 
     id:'nose-pin4',
     title: 'Card 4',  
     imageUrl:nosepin,
     price:2500,
-    category: 'CategoryEight',
+    category: 'Nose-Pin',
   },
 
   {
@@ -474,28 +474,28 @@ export const CombinedData = [
     title: 'Card 5',  
     imageUrl:nosepin,
     price:2500,
-    category: 'CategoryEight',
+    category: 'Nose-Pin',
   },
   { 
     id:'nose-pin6',
     title: 'Card 6',  
     imageUrl:nosepin,
     price:2500,
-    category: 'CategoryEight',
+    category: 'Nose-Pin',
   },
   { 
     id:'nose-pin7',
     title: 'Card 7',  
     imageUrl:nosepin,
     price:2500,
-    category: 'CategoryEight',
+    category: 'Nose-Pin',
   },
   {
     id:'nose-pin8',
     title: 'Card 8',  
     imageUrl:nosepin,
     price:2500,
-    category: 'CategoryEight',
+    category: 'Nose-Pin',
   },
 ];
 

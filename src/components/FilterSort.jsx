@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const FilterSort = ({ applyFilters }) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState([]);
-
+  const navigate = useNavigate();
   const openFilterMenu = () => {
     setIsFilterOpen(true);
   };
@@ -27,6 +28,14 @@ const FilterSort = ({ applyFilters }) => {
 
   return (
     <div className="relative flex justify-between items-center p-4 bg-gray-100 rounded-md shadow-md">
+        <button type="button"
+        className="inline-flex justify-center w-36 rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+        aria-haspopup="true"
+       onClick={() => navigate(-1)}>
+      
+     Category
+
+    </button>
       <button
         type="button"
         className="inline-flex justify-center w-36 rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
@@ -57,6 +66,7 @@ const FilterSort = ({ applyFilters }) => {
             </button>
           </div>
           <ul>
+            Discount
             <li className="py-1">
               <label className="inline-flex items-center">
                 <input
@@ -90,6 +100,9 @@ const FilterSort = ({ applyFilters }) => {
                 <span className="ml-2 text-gray-700">40% or more</span>
               </label>
             </li>
+            </ul>
+            <ul>
+              Price
             <li className="py-1">
               <label className="inline-flex items-center">
                 <input
@@ -133,13 +146,7 @@ const FilterSort = ({ applyFilters }) => {
           </button>
         </div>
       )}
-      <button
-        type="button"
-        className="inline-flex justify-center w-36 rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-        aria-haspopup="true"
-      >
-        Sort
-      </button>
+     
     </div>
   );
 };
