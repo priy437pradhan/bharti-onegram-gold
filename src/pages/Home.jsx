@@ -17,12 +17,13 @@ const categories = [
   { image: image6, link: '/category/Bangle', title:"Bangle" },
   { image: image7, link: '/category/Anklet', title:"Anklet" },
   { image: image8, link: '/category/Nose-Pin', title:"Nose Pin" },
+  { image: image8, link: '/category/Nose-Pin', title:"Nose Pin" },
 ];
 
 const Home = () => {
   return (
     <div className="container px-2 py-2">
-      <div className="grid grid-cols-3 sm:grid-cols-2 grid-cols-2">
+      <div className="grid sm:grid-cols-3 grid-cols-3">
         {categories.map((category, index) => (
           <Category key={index} image={category.image} link={category.link} title={category.title} />
         ))}

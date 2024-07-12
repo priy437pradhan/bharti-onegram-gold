@@ -5,21 +5,17 @@ const MainCatCard = ({ id, title, discount, imageUrl,price}) => {
   const navigate = useNavigate();
   return (
     <>
-    <div
-      onClick={() => navigate(`/jewellery/${id}`)}>
-      <div className="MainCatCard max-w-xs rounded overflow-hidden shadow-lg">
-      <img className="w-full" src={imageUrl} alt={title} />
-      <div className="CardDescription px-2 py-2">
-        <div className="font-400 text-m mb-1">{title}</div>
-        <div className="font-600 text-s mb-1">{`Rupees : ${price}`}</div>
-        <div className="font-600 text-s mb-1" style={{color:"green" }}>{ discount}</div>
-        
-      </div>
-    </div>
-    </div>
-    <div className="flex justify-start">
-    
-    </div>
+   
+        <div onClick={() => navigate(`/jewellery/${id}`)} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
+            <div className="p-4">
+                <h3 className="text-lg font-semibold mb-2">{title}</h3>
+                <div className="flex justify-between items-center">
+                    <span className="text-xl font-bold text-gray-800">${price}</span>
+                    {discount && <span className="text-sm text-red-500">-{discount}</span>}
+                </div>
+            </div>
+        </div>
     </>
   );
 };

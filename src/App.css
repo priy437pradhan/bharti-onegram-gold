@@ -23,7 +23,22 @@
     }
   }
   
-  
+  .category-container:hover .category-image {
+    transform: scale(1.1) rotate(2deg);
+    filter: brightness(1.1);
+}
+
+.category-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category-container:hover .category-title {
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: background-color 0.3s, transform 0.3s;
+    transform: translateY(-10px);
+}
+
   .c-responsive-image-sc {
     position: relative;
     height: 268px;

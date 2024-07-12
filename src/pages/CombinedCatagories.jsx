@@ -53,27 +53,26 @@ function CombinedCategories() {
 
   return (
     <>
-      <div className="p-2">
-        <GoBackButton />
-        <FilterSort applyFilters={applyFilters} />
-        <HandleOrderTwo />
-      </div>
-      <div className="flex flex-wrap justify-start">
-        {dataToDisplay.map((card, index) => (
-          <div key={index} className="w-1/2 p-2">
-            <MainCatCard
-              key={card.id}
-              id={card.id}
-              title={card.title}
-              imageUrl={card.imageUrl}
-              price={card.price}
-              discount={card.discount}
-            />
-          </div>
-        ))}
-      </div>
+        <div className="p-2 md:p-4 lg:p-6">
+            <GoBackButton />
+            <FilterSort applyFilters={applyFilters} />
+            <HandleOrderTwo />
+        </div>
+        <div className="flex flex-wrap justify-start">
+            {dataToDisplay.map((card, index) => (
+                <div key={index} className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-2">
+                    <MainCatCard
+                        id={card.id}
+                        title={card.title}
+                        imageUrl={card.imageUrl}
+                        price={card.price}
+                        discount={card.discount}
+                    />
+                </div>
+            ))}
+        </div>
     </>
-  );
+);
 }
 
 export default CombinedCategories;
