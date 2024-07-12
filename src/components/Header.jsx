@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 left-0  text-orange-400 shadow-md z-20 w-full"  style={{backgroundColor:"#082217" }}>
-      <div className="container mx-auto flex justify-between items-center p-4">
+      <div className="container mx-auto flex justify-between items-center p-4 pb-3">
         
         <div
       onClick={() => navigate(`/`)}><img src={mainLogo} alt="" className='mainLogo'/></div>

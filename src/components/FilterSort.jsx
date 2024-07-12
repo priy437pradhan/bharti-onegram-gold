@@ -27,15 +27,10 @@ const FilterSort = ({ applyFilters }) => {
   };
 
   return (
-    <div className="relative  top-0 left-0   flex justify-between items-center p-4 bg-gray-100 rounded-md shadow-md">
-        <button type="button"
-        className="inline-flex justify-center w-36 rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-        aria-haspopup="true"
-       onClick={() => navigate('/')}>
-      
-     Category
+    <div className="fixed top-20 left-0 z-20 w-full flex justify-between items-center p-4 bg-gray-100 rounded-md shadow-md"
 
-    </button>
+
+>
       <button
         type="button"
         className="inline-flex justify-center w-36 rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
@@ -147,6 +142,14 @@ const FilterSort = ({ applyFilters }) => {
         </div>
       )}
      
+     <button type="button"
+        className="inline-flex justify-center w-36 rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+        aria-haspopup="true"
+       onClick={() => navigate('/')}>
+      
+     Category
+
+    </button>
     </div>
   );
 };
