@@ -6,16 +6,19 @@ const MainCatCard = ({ id, title, discount, imageUrl,price}) => {
   return (
     <>
    
-        <div onClick={() => navigate(`/jewellery/${id}`)} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
-            <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2">{title}</h3>
-                <div className="flex justify-between items-center">
-                    <span className="text-xl font-bold text-gray-800">${price}</span>
-                    {discount && <span className="text-sm text-red-500">-{discount}</span>}
-                </div>
-            </div>
+   <div onClick={() => navigate(`/jewellery/${id}`)} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+    <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
+    <div className="p-4">
+   
+    <h3 className="text-lg font-mono mb-2">{title}</h3> 
+        <div className="flex justify-between items-center">
+       
+        <span className="text-base font-medium text-gray-800">Rupees:{price}</span>
+            {discount && <span className="text-sm text-red-500">-{discount}</span>}
         </div>
+    </div>
+</div>
+
     </>
   );
 };

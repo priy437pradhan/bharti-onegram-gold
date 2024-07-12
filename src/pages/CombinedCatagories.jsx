@@ -1,10 +1,13 @@
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import MainCatCard from '../components/MainCatCard';
 import { CombinedData } from '../lib/CombinedData';
 import FilterSort from '../components/FilterSort';
-import GoBackButton from '../components/GoBackButton';
+// import GoBackButton from '../components/GoBackButton';
 import HandleOrderTwo from '../components/HandleOrderTwo';
+import CategoryTwo from '../components/CategoryTwo'; 
+import CategoryThree from '../components/CategoryThree'; 
 
 function CombinedCategories() {
   const { category } = useParams();
@@ -13,6 +16,7 @@ function CombinedCategories() {
   useEffect(() => {
     applyFilters([]);
   }, [category]);
+
   const applyFilters = (selectedFilters) => {
     let dataToFilter = CombinedData.filter(item => item.category === category);
 
@@ -53,26 +57,35 @@ function CombinedCategories() {
 
   return (
     <>
-        <div className="p-2 md:p-4 lg:p-6">
-            <GoBackButton />
-            <FilterSort applyFilters={applyFilters} />
-            <HandleOrderTwo />
-        </div>
-        <div className="flex flex-wrap justify-start">
-            {dataToDisplay.map((card, index) => (
-                <div key={index} className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-2">
-                    <MainCatCard
-                        id={card.id}
-                        title={card.title}
-                        imageUrl={card.imageUrl}
-                        price={card.price}
-                        discount={card.discount}
-                    />
-                </div>
-            ))}
-        </div>
+      <div className="p-2 md:p-4 lg:p-6">
+        {/* <GoBackButton /> */}
+        <FilterSort applyFilters={applyFilters} />
+        <HandleOrderTwo />
+      </div>
+      <div className="flex flex-wrap justify-start">
+        {dataToDisplay.map((card, index) => (
+          <React.Fragment key={index}>
+            <div className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-2">
+              <MainCatCard
+                id={card.id}
+                title={card.title}
+                imageUrl={card.imageUrl}
+                price={card.price}
+                discount={card.discount}
+              />
+            </div>
+            {(index + 1) === 4 && (
+              <div className="w-full p-2">
+                <CategoryTwo />
+             
+              </div>
+            )}
+          </React.Fragment>
+        ))}
+      </div>
+      <CategoryThree/>
     </>
-);
+  );
 }
 
 export default CombinedCategories;

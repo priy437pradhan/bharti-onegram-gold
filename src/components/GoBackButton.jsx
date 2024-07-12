@@ -6,12 +6,14 @@ const GoBackButton = () => {
 
   return (
     <button
-      onClick={() => navigate(-1)}>
-      
-      <IoArrowBack style={{ color: '#007BFF', fontSize:"20px"}} className="mr-4" /> 
-
+      onClick={() => navigate(-1)}
+      className="lg:hidden" 
+    >
+      <IoArrowBack style={{ color: '#007BFF', fontSize: "20px" }} className="mr-4" />
     </button>
   );
+
 };
 
 export default GoBackButton;
+

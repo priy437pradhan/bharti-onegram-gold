@@ -9,12 +9,16 @@ const HandleOrderTwo = () => {
   };
 
   return (
+    <div className="flex justify-center">
     <img
       src={ContactUsImage}
       onClick={HandleOrder}
       alt="Contact Us"
-      className="shadow-md my-2"
+      className="shadow-md my-2 rounded-lg"
+      style={{ borderRadius: '14px' }} 
     />
+  </div>
+  
   );
 };
 

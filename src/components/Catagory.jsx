@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import '../App.css'; // Import custom CSS
+import '../App.css';
 
 const Category = ({ image, link, title, isLarge }) => {
     const navigate = useNavigate();

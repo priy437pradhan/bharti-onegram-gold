@@ -30,24 +30,30 @@ const CardDetail = () => {
   return (
     <div className="p-2">
       <GoBackButton />
-      <div
-        className={`c-responsive-image-sc relative rounded overflow-hidden shadow-lg lg:m-4 my-4 mx-1 group cursor-pointer lg:float-left ${isExpanded ? 'h-expanded hi-expanded' : ''}`}
-        onClick={toggleExpand}
-      >
-        <div className="relative">
-          <img
-            src={card.imageUrl}
-            alt={card.title}
-            className={`responsive-image-sc ${isExpanded ? 'hi-expanded' : ''}`}
-          />
-         
-        </div>
-        <div className="px-2 py-2 absolute">
-          <div className="font-500 text-m mb-2">{card.title}</div>
-          <p className="text-gray-700 text-base">{`Rupees : ${card.price}`}</p>
-          <div className="font-600 text-s mb-1" style={{color:"green" }}>{card.discount}</div>
-        </div>
+      <div className={`card-detail-container relative rounded-lg overflow-hidden shadow-lg lg:m-4 my-4 mx-1 group cursor-pointer lg:float-left ${isExpanded ? 'h-expanded hi-expanded' : ''}`} onClick={toggleExpand}>
+  <div className="relative">
+    <img
+      src={card.imageUrl}
+      alt={card.title}
+      className={`card-detail-image ${isExpanded ? 'hi-expanded' : ''} object-cover w-full h-full`}
+    />
+    <div className="absolute inset-0 rounded-lg overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-transparent opacity-90"></div> 
+      <div className="absolute inset-x-0 bottom-0 p-4 text-white text-center">
+        <div className="font-bold text-3xl mb-2">{card.title}</div>
+        <p className="text-gray-300 text-lg">{`Price: Rs ${card.price}`}</p>
+        <p className="text-green-500 font-semibold text-lg">{card.discount}</p>
+        
       </div>
+    </div>
+  </div>
+      </div>
+
+
+
+
+
+
       <div className={`shareOrder p-2 ${isExpanded ? 'btn-mt-2' : ''}`}>
         <HandleShare card={card} />
         <HandleOrder card={card} />
