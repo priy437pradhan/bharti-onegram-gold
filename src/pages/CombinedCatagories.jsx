@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import MainCatCard from '../components/MainCatCard';
 import { CombinedData } from '../lib/CombinedData';
 import FilterSort from '../components/FilterSort';
-// import GoBackButton from '../components/GoBackButton';
 import HandleOrderTwo from '../components/HandleOrderTwo';
-import CategoryTwo from '../components/CategoryTwo'; 
-import CategoryThree from '../components/CategoryThree'; 
+import CategoryTwo from '../components/CategoryTwo';
+import CategoryThree from '../components/CategoryThree';
+import Cart from '../components/CartPage';
 
 function CombinedCategories() {
   const { category } = useParams();
   const [filteredData, setFilteredData] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     applyFilters([]);
@@ -49,6 +49,20 @@ function CombinedCategories() {
     setFilteredData(dataToFilter);
   };
 
+  const addToCart = (item) => {
+    setCartItems(prevItems => {
+      if (prevItems.find(cartItem => cartItem.id === item.id)) {
+        return prevItems;
+      } else {
+        return [...prevItems, item];
+      }
+    });
+  };
+
+  const removeFromCart = (itemId) => {
+    setCartItems(prevItems => prevItems.filter(cartItem => cartItem.id !== itemId));
+  };
+
   const dataToDisplay = filteredData.length > 0 ? filteredData : CombinedData.filter(item => item.category === category);
 
   if (dataToDisplay.length === 0) {
@@ -58,7 +72,6 @@ function CombinedCategories() {
   return (
     <>
       <div className="p-2 md:p-4 lg:p-6">
-        {/* <GoBackButton /> */}
         <FilterSort applyFilters={applyFilters} />
         <HandleOrderTwo />
       </div>
@@ -72,18 +85,20 @@ function CombinedCategories() {
                 imageUrl={card.imageUrl}
                 price={card.price}
                 discount={card.discount}
+                addToCart={() => addToCart(card)}
+                addedToCart={!!cartItems.find(item => item.id === card.id)}
               />
             </div>
             {(index + 1) === 4 && (
               <div className="w-full p-2">
                 <CategoryTwo />
-             
               </div>
             )}
           </React.Fragment>
         ))}
       </div>
-      <CategoryThree/>
+      <CategoryThree />
+      {/* <Cart cartItems={cartItems} removeFromCart={removeFromCart} /> */}
     </>
   );
 }

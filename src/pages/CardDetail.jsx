@@ -57,6 +57,7 @@ const CardDetail = () => {
       <div className={`shareOrder p-2 ${isExpanded ? 'btn-mt-2' : ''}`}>
         <HandleShare card={card} />
         <HandleOrder card={card} />
+        
         <OrderCard />
       </div>
     </div>

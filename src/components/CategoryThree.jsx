@@ -25,7 +25,7 @@ const categories = [
 
 const CategoryThree = () => {
   return (
-    <div className="container px-2 py-2 overflow-x-auto">
+    <div className="container px-2 py-2 mb-16 overflow-x-auto">
       <div className="flex space-x-4 w-max">
         {categories.map((category, index) => (
           <Category key={index} image={category.image} link={category.link} title={category.title} />

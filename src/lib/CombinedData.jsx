@@ -15,7 +15,7 @@ export const CombinedData = [
     imageUrl: jewellerySetImage,
     price: 500,
     category: 'set',
-    discount: '30%',
+    discount: '30',
   },
   { 
     id: 'jewelleryset2',
@@ -23,7 +23,7 @@ export const CombinedData = [
     imageUrl: jewellerySetImage,
     price: 2500,
     category: 'set',
-    discount :'20%',
+    discount :'20',
   },
   { 
     id: 'jewelleryset3',
@@ -31,7 +31,7 @@ export const CombinedData = [
     imageUrl: jewellerySetImage,
     price: 33500,
     category: 'set',
-    discount :'10%',
+    discount :'10',
   },
   { 
     id: 'jewelleryset4',
@@ -39,7 +39,7 @@ export const CombinedData = [
     imageUrl: jewellerySetImage,
     price: 2500,
     category: 'set',
-    discount :'20%',
+    discount :'20',
   },
   { 
     id: 'jewelleryset5',
@@ -47,7 +47,7 @@ export const CombinedData = [
     imageUrl: jewellerySetImage,
     price: 200,
     category: 'set',
-    discount :'10%',
+    discount :'10',
   },
   { 
     id: 'jewelleryset6',
@@ -55,7 +55,7 @@ export const CombinedData = [
     imageUrl: jewellerySetImage,
     price: 2500,
     category: 'set',
-    discount :'10%',
+    discount :'10',
   },
   { 
     id: 'jewelleryset7',
@@ -63,7 +63,7 @@ export const CombinedData = [
     imageUrl: jewellerySetImage,
     price: 2500,
     category: 'set',
-    discount :'10%',
+    discount :'10',
   },
   { 
     id: 'jewelleryset8',
@@ -71,7 +71,7 @@ export const CombinedData = [
     imageUrl: jewellerySetImage,
     price: 2500,
     category: 'set',
-    discount :'20%',
+    discount :'20',
   },
   { 
     id: 'Chain1',
@@ -79,7 +79,7 @@ export const CombinedData = [
     imageUrl: chainImage,
     price: 1500,
     category: 'Chain',
-    discount :'20%',
+    discount :'20',
 
   },
   { 
@@ -88,7 +88,7 @@ export const CombinedData = [
     imageUrl: chainImage,
     price: 2200,
     category: 'Chain',
-    discount :'20%',
+    discount :'20',
 
   },
   { 
@@ -97,7 +97,7 @@ export const CombinedData = [
     imageUrl: chainImage,
     price: 2500,
     category: 'Chain',
-    discount :'20%',
+    discount :'20',
 
   },
   { 
@@ -106,7 +106,7 @@ export const CombinedData = [
     imageUrl: chainImage,
     price: 4500,
     category: 'Chain',
-    discount :'40%',
+    discount :'40',
 
   },
   { 
@@ -115,7 +115,7 @@ export const CombinedData = [
     imageUrl: chainImage,
     price: 7500,
     category: 'Chain',
-    discount :'40%',
+    discount :'40',
   },
   { 
     id: 'Chain6',
@@ -123,7 +123,7 @@ export const CombinedData = [
     imageUrl: chainImage,
     price: 2500,
     category: 'Chain',
-    discount :'40%',
+    discount :'40',
   },
   { 
     id: 'Chain7',
@@ -131,7 +131,7 @@ export const CombinedData = [
     imageUrl: chainImage,
     price: 2500,
     category: 'Chain',
-    discount :'10%',
+    discount :'10',
   },
   { 
     id: 'Chain8',
@@ -139,7 +139,7 @@ export const CombinedData = [
     imageUrl: chainImage,
     price: 2500,
     category: 'Chain',
-    discount :'40%',
+    discount :'40',
   },
   { 
     id:'Brecelets1',
@@ -147,7 +147,7 @@ export const CombinedData = [
     imageUrl:brecelets,
     price:2500,
     category: 'Bracelets',
-    discount :'20%',
+    discount :'20',
   },
 
   { 
@@ -156,7 +156,7 @@ export const CombinedData = [
     imageUrl:brecelets,
     price:2500,
     category: 'Bracelets',
-    discount :'25%',
+    discount :'25',
    },
 
   { 

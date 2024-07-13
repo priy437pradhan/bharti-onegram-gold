@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import SearchBar from './SearchBar';
+import { Link } from 'react-router-dom';
 import mainLogo from '../assets/mainLogo.png';
+import { BiCart} from 'react-icons/bi'; 
 import '../App.css';
 
 const Header = () => {
@@ -18,8 +20,10 @@ const Header = () => {
         
         <div
       onClick={() => navigate(`/`)}><img src={mainLogo} alt="" className='mainLogo'/></div>
-        <div className="p-4">
-      {/* <SearchBar /> */}
+        <div className="p-4 ml-16">
+        <Link to="/cart" className="hover:text-gray-400 flex flex-col items-center">
+        <BiCart className="h-6 w-6" />
+      </Link>
         </div>
         <nav className="hidden md:flex space-x-6">
           <a href="about" className="hover:text-orange-500 transition-colors duration-200">About</a>
@@ -38,6 +42,7 @@ const Header = () => {
           </button>
         </div>
       </div>
+      
       <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-gray-800`}>
         <a href="about" className="block px-4 py-2 hover:bg-gray-700 transition-colors duration-200">About</a>
         <a href="service" className="block px-4 py-2 hover:bg-gray-700 transition-colors duration-200">Services</a>
