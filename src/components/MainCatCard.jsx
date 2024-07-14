@@ -1,21 +1,21 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import { FiShoppingCart, FiCheckCircle } from 'react-icons/fi';
-import { useCart  } from '../Context/CartContext';
+// import { FiShoppingCart, FiCheckCircle } from 'react-icons/fi';
+// import { useCart } from '../Context/CartContext';
 import '../App.css';
 
 const MainCatCard = ({ id, title, discount, imageUrl, price }) => {
   const navigate = useNavigate();
-  const { addToCart } = useCart();
-  const [addedToCart, setAddedToCart] = useState(false);
+  // const { addToCart } = useCart();
+  // const [addedToCart, setAddedToCart] = useState(false);
 
-  const toggleCartState = (e) => {
-    e.stopPropagation();
-    const item = { id, title, discount, imageUrl, price };
-    addToCart(item);
-    setAddedToCart(!addedToCart);
-  };
+  // const addToCartHandler = (e) => {
+  //   e.stopPropagation();
+  //   const item = { id, title, discount, imageUrl, price };
+  //   addToCart(item);
+  //   setAddedToCart(true);
+  // };
 
   return (
     <div
@@ -26,11 +26,12 @@ const MainCatCard = ({ id, title, discount, imageUrl, price }) => {
       <div className="p-4">
         <h3 className="text-lg font-mono mb-2">{title}</h3>
         <div className="flex justify-between items-center">
-          <span className="text-base font-medium text-gray-800">Rupees: {price}</span>
+          <span className="text-base font-medium text-gray-800">Rs: {price}</span>
           {discount && <span className="text-sm text-red-500">-{discount}%</span>}
         </div>
-        <button
-          onClick={toggleCartState}
+        {/* <button
+          onClick={addToCartHandler}
+          disabled={addedToCart}
           className={`mt-2 flex items-center justify-center py-1 px-2 rounded-full transition-colors duration-300 ${addedToCart ? 'bg-green-500' : 'bg-blue-500 hover:bg-blue-700'} text-white font-bold text-sm`}
         >
           {addedToCart ? (
@@ -44,7 +45,7 @@ const MainCatCard = ({ id, title, discount, imageUrl, price }) => {
               Add
             </>
           )}
-        </button>
+        </button> */}
       </div>
     </div>
   );

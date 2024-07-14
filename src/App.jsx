@@ -19,7 +19,7 @@ function App() {
       <Header />
       <Routes>  
         <Route path="/" element={<Home />} /> 
-        <Route path="/category/:category" element={<CombinedCategories />} />
+        <Route path="/alljewellery/:category" element={<CombinedCategories />} />
         
 
         <Route path="/jewellery/:id" element={<CardDetail />}/>

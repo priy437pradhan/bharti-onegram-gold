@@ -5,7 +5,7 @@ const OrderCard = () => {
       <div className="px-2 py-4">
         <div className="font-bold text-xl mb-2">Place Your Order Securely</div>
         <p className="text-gray-700 text-base">
-          Click on the Order button to contact us 📞 so that we can help you place your order securely 🔒.
+          Click on the Order button to contact us/whatsapp us on 9861667624📞 so that we can help you place your order securely 🔒.
         </p>
        
       </div>

@@ -6,7 +6,6 @@ import FilterSort from '../components/FilterSort';
 import HandleOrderTwo from '../components/HandleOrderTwo';
 import CategoryTwo from '../components/CategoryTwo';
 import CategoryThree from '../components/CategoryThree';
-import Cart from '../components/CartPage';
 
 function CombinedCategories() {
   const { category } = useParams();
@@ -59,10 +58,6 @@ function CombinedCategories() {
     });
   };
 
-  const removeFromCart = (itemId) => {
-    setCartItems(prevItems => prevItems.filter(cartItem => cartItem.id !== itemId));
-  };
-
   const dataToDisplay = filteredData.length > 0 ? filteredData : CombinedData.filter(item => item.category === category);
 
   if (dataToDisplay.length === 0) {
@@ -87,6 +82,7 @@ function CombinedCategories() {
                 discount={card.discount}
                 addToCart={() => addToCart(card)}
                 addedToCart={!!cartItems.find(item => item.id === card.id)}
+                disableAddToCart={!!cartItems.find(item => item.id === card.id)}
               />
             </div>
             {(index + 1) === 4 && (
