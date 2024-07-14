@@ -13,14 +13,14 @@ import image8 from '../assets/nose-pin.jpg';
 import '../App.css';
 
 const categories = [
-  { image: image1, link: '/category/set', title: "Set" },
-  { image: image2, link: '/category/Chain', title: "Chain" },
-  { image: image3, link: '/category/Bracelets', title: "Bracelets" },
-  { image: image4, link: '/category/Ear-Ring', title: "Ear Ring" },
-  { image: image5, link: '/category/Ring', title: "Ring" },
-  { image: image6, link: '/category/Bangle', title: "Bangle" },
-  { image: image7, link: '/category/Anklet', title: "Anklet" },
-  { image: image8, link: '/category/Nose-Pin', title: "Nose Pin" },
+  { image: image1, link: '/alljewellery/set', title: "Set" },
+  { image: image2, link: '/alljewellery/Chain', title: "Chain" },
+  { image: image3, link: '/alljewellery/Bracelets', title: "Bracelets" },
+  { image: image4, link: '/alljewellery/Ear-Ring', title: "Ear Ring" },
+  { image: image5, link: '/alljewellery/Ring', title: "Ring" },
+  { image: image6, link: '/alljewellery/Bangle', title: "Bangle" },
+  { image: image7, link: '/alljewellery/Anklet', title: "Anklet" },
+  { image: image8, link: '/alljewellery/Nose-Pin', title: "Nose Pin" },
 ];
 
 const CategoryThree = () => {

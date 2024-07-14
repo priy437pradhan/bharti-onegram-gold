@@ -1,6 +1,6 @@
 import { BiX } from 'react-icons/bi';
 import { useCart } from '../Context/CartContext';
-import OrderCard from './OrderCard';
+import OrderCard from '../components/OrderCard';
 import GoBackButton from '../components/GoBackButton';
 
 const Cart = () => {

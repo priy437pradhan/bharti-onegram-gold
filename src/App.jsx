@@ -8,7 +8,7 @@ import CardDetail from './pages/CardDetail'
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
-import CartPage from './components/CartPage'; 
+import CartPage from './pages/CartPage'; 
 
 import './App.css';
 
