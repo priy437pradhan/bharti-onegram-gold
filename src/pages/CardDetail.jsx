@@ -53,7 +53,7 @@ const CardDetail = () => {
             <div className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black via-transparent to-transparent text-white">
               <div className="font-bold text-xl mb-2">{card.title}</div>
               <div className="flex  items-center">
-          <span className="text-base font-medium text-white-800">Rs: {card.price}</span>
+          <span className="text-base font-medium text-white-800">Rs:{card.price}</span>
           {card.discount && <span className="text-sm font-bold text-red-600">-Discount : {card.discount}%</span>}
         </div>
               <button

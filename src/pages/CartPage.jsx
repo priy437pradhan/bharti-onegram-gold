@@ -42,7 +42,7 @@ const Cart = () => {
           ))}
           <div className="flex justify-between items-center mt-4">
             <p className="text-lg font-bold">Total:</p>
-            <p className="text-lg font-bold">Rs. {getTotalPrice().toFixed(2)}</p>
+            <p className="text-lg font-bold">Rs.{getTotalPrice().toFixed(2)}</p>
           </div>
           <OrderCard />
         </div>
