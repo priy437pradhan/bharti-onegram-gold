@@ -94,7 +94,6 @@ function CombinedCategories() {
         ))}
       </div>
       <CategoryThree />
-      {/* <Cart cartItems={cartItems} removeFromCart={removeFromCart} /> */}
     </>
   );
 }

@@ -16,7 +16,7 @@ const categories = [
   { image: image1, link: '/alljewellery/set', title: "Set" },
   { image: image2, link: '/alljewellery/Chain', title: "Chain" },
   { image: image3, link: '/alljewellery/Bracelets', title: "Bracelets" },
-  { image: image4, link: '/alljewelleryory/Ear-Ring', title: "Ear Ring" },
+  { image: image4, link: '/alljewellery/Ear-Ring', title: "Ear Ring" },
   { image: image5, link: '/alljewellery/Ring', title: "Ring" },
   { image: image6, link: '/alljewellery/Bangle', title: "Bangle" },
   { image: image7, link: '/alljewellery/Anklet', title: "Anklet" },

@@ -6,7 +6,7 @@ import image5 from '../assets/ring.jpg';
 import image6 from '../assets/bengle.jpg';
 import image7 from '../assets/anklet.jpg';
 import image8 from '../assets/nose-pin.jpg';
-import Category from '../components/Catagory'; // Corrected import name
+import Category from '../components/Catagory'; 
 
 const categories = [
   { image: image1, link: '/alljewellery/set', title: "Set" },

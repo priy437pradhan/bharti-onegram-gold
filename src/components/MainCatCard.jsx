@@ -1,18 +1,23 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-// import { BiHeart } from 'react-icons/bi'; 
+import { BiHeart } from 'react-icons/bi'; 
+import { CombinedData } from '../lib/CombinedData';
 import '../App.css';
-
+import { useWishList } from '../Context/WishListContext';
 const MainCatCard = ({ id, title, discount, imageUrl, price }) => {
-  const navigate = useNavigate();
-  // const [isWishlisted, setIsWishlisted] = useState(false);
+  const CombinedDataItem = CombinedData.find((item) => item.id === id) || {};
+  const card = { ...CombinedDataItem };
 
-  // const handleWishlistClick = (e) => {
-  //   e.stopPropagation(); 
-  //   setIsWishlisted(!isWishlisted);
-  //   console.log('Added to wishlist');
-  // };
+  const navigate = useNavigate();
+  const [isWishlisted, setIsWishlisted] = useState(false);
+  const { addToWishList } = useWishList();
+
+  const addToWishListHandler = (e) => {
+    e.stopPropagation();
+    addToWishList(card);
+    setIsWishlisted(true);
+  };
 
   const handleCardClick = () => {
     navigate(`/jewellery/${id}`);
@@ -30,12 +35,12 @@ const MainCatCard = ({ id, title, discount, imageUrl, price }) => {
           <span className="text-base font-medium text-gray-800">Rs: {price}</span>
           {discount && <span className="text-sm text-red-500">-{discount}%</span>}
         </div>
-        {/* <button
-          onClick={handleWishlistClick}
-          className="absolute top-4 right-4 p-2 bg-gray-200 rounded-full"
+       <button
+          onClick={addToWishListHandler }
+          className="absolute top-2 right-2 p-1 bg-gray-200 rounded-full"
         >
           <BiHeart className={`text-${isWishlisted ? 'pink' : 'gray'}-500 w-6 h-6`} />
-        </button> */}
+        </button> 
       </div>
     </div>
   );

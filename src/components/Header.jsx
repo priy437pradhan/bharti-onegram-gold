@@ -1,22 +1,17 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import mainLogo from '../assets/mainLogo.png';
-import { BiCart } from 'react-icons/bi'; 
-// import { FaHeart} from 'react-icons/fa';
-import { useCart } from '../Context/CartContext';
 import '../App.css';
 
 const Header = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { cartItems } = useCart();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
+  
 
   return (
     <header className="sticky top-0 left-0 text-orange-400 shadow-md z-20 w-full" style={{ backgroundColor: "#082217" }}>
@@ -24,20 +19,7 @@ const Header = () => {
         <div onClick={() => navigate(`/`)}>
           <img src={mainLogo} alt="" className='mainLogo' />
         </div>
-        <div className="flex p-4 ml-10 relative">
-        {/* <Link to="/favorites"  className="hover:text-gray-400 mr-2 flex flex-col items-center">
-          <FaHeart className="h-6 w-6" />
-          </Link> */}
-          <Link to="/cart" className="hover:text-gray-400 flex flex-col items-center">
-            <BiCart className="h-6 w-6" />
-            {totalQuantity > 0 && (
-              <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                {totalQuantity > 9 ? '9+' : totalQuantity}
-              </span>
-            )}
-          </Link>
-          
-        </div>
+       
         <nav className="hidden md:flex space-x-6">
           <a href="about" className="hover:text-orange-500 transition-colors duration-200">About</a>
           <a href="service" className="hover:text-orange-500 transition-colors duration-200">Services</a>
