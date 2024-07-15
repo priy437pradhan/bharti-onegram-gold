@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BiHome, BiCart, BiSearch } from 'react-icons/bi'; 
+import { BiHome, BiCart} from 'react-icons/bi'; 
 import { FaHeart } from 'react-icons/fa';
 import { useCart } from '../Context/CartContext';
 function Footer() {

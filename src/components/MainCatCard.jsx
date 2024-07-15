@@ -1,22 +1,32 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import { BiHeart } from 'react-icons/bi'; 
+import { FaHeart } from 'react-icons/fa';
 import { CombinedData } from '../lib/CombinedData';
 import '../App.css';
 import { useWishList } from '../Context/WishListContext';
+
 const MainCatCard = ({ id, title, discount, imageUrl, price }) => {
   const CombinedDataItem = CombinedData.find((item) => item.id === id) || {};
   const card = { ...CombinedDataItem };
 
   const navigate = useNavigate();
+  const { addToWishList, removeFromWishList, wishListItems } = useWishList();
   const [isWishlisted, setIsWishlisted] = useState(false);
-  const { addToWishList } = useWishList();
 
-  const addToWishListHandler = (e) => {
+  useEffect(() => {
+    const isItemWishlisted = wishListItems.some(item => item.id === id);
+    setIsWishlisted(isItemWishlisted);
+  }, [wishListItems, id]);
+
+  const handleWishListClick = (e) => {
     e.stopPropagation();
-    addToWishList(card);
-    setIsWishlisted(true);
+    if (isWishlisted) {
+      removeFromWishList(id);
+    } else {
+      addToWishList(card);
+    }
+    setIsWishlisted(!isWishlisted);
   };
 
   const handleCardClick = () => {
@@ -35,12 +45,12 @@ const MainCatCard = ({ id, title, discount, imageUrl, price }) => {
           <span className="text-base font-medium text-gray-800">Rs: {price}</span>
           {discount && <span className="text-sm text-red-500">-{discount}%</span>}
         </div>
-       <button
-          onClick={addToWishListHandler }
-          className="absolute top-2 right-2 p-1 bg-gray-200 rounded-full"
+        <button
+          onClick={handleWishListClick}
+          className="absolute top-2 right-2 p-2 bg-white rounded-full"
         >
-          <BiHeart className={`text-${isWishlisted ? 'pink' : 'gray'}-500 w-6 h-6`} />
-        </button> 
+          <FaHeart className={isWishlisted ? 'text-[#ff0066]' : 'text-gray-300'} />
+        </button>
       </div>
     </div>
   );
