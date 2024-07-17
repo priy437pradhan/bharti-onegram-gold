@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 .mainLogo {
-  height: 70px;
+  height: 80px;
   width: auto;
  
   object-fit: cover;

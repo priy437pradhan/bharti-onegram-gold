@@ -1,3 +1,4 @@
+import { FaShareAlt } from 'react-icons/fa';
 const HandleShare = ({ card }) => {
     const handleShare = async () => {
       if (navigator.share) {
@@ -18,11 +19,12 @@ const HandleShare = ({ card }) => {
   
     return (
       <button
-        onClick={handleShare}
-        className="bg-blue-500 text-white py-2 px-4 mr-2 rounded hover:bg-blue-700 transition duration-300"
-      >
-        Share
-      </button>
+      onClick={handleShare}
+      className="mt-4  h-10 py-1 px-3 mr-2 text-black font-semibold border border-black  rounded transition duration-300 flex items-center"
+    >
+      <FaShareAlt  className="stroke-current stroke-2"/>
+      
+    </button>
     );
   };
  

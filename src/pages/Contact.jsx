@@ -2,7 +2,7 @@
 const ContactPage = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <div className="container mx-auto py-12">
+      <div className="container mx-auto py-2">
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105">
           <div className="p-6">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>

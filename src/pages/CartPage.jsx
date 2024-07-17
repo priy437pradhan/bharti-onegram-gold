@@ -1,10 +1,21 @@
+import { useState } from 'react';
 import { BiX } from 'react-icons/bi';
 import { useCart } from '../Context/CartContext';
 import OrderCard from '../components/OrderCard';
 import GoBackButton from '../components/GoBackButton';
+import QuickViewModal from '../components/QuickViewModal';
 
 const Cart = () => {
   const { cartItems, removeFromCart, incrementQuantity, decrementQuantity } = useCart();
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleCardClick = (item) => {
+    setSelectedItem(item);
+  };
+
+  const closeModal = () => {
+    setSelectedItem(null);
+  };
 
   const getTotalPrice = () => {
     return cartItems.reduce((total, item) => {
@@ -22,7 +33,11 @@ const Cart = () => {
       ) : (
         <div className="space-y-4">
           {cartItems.map(item => (
-            <div key={item.id} className="bg-white p-4 rounded-lg shadow-md overflow-hidden h-40 flex items-center space-x-4">
+            <div
+              key={item.id}
+              className="bg-white p-4 rounded-lg shadow-md overflow-hidden h-40 flex items-center space-x-4 relative hover:shadow-xl transition-shadow duration-300"
+              onClick={() => handleCardClick(item)}
+            >
               <img src={item.imageUrl} alt={item.title} className="w-20 h-20 object-cover" />
               <div className="flex-1">
                 <h3 className="text-lg font-bold">{item.title}</h3>
@@ -32,21 +47,23 @@ const Cart = () => {
                 )}
                 <p className="text-sm text-gray-600">Quantity: {item.quantity}</p>
                 <div className="flex items-center">
-                  <button onClick={() => decrementQuantity(item.id)} className="px-1 py-1 bg-gray-200 rounded text-xs">-</button>
+                  <button onClick={(e) => { e.stopPropagation(); decrementQuantity(item.id); }} className="px-1 py-1 bg-gray-200 rounded text-xs">-</button>
                   <span className="px-2 text-sm">{item.quantity}</span>
-                  <button onClick={() => incrementQuantity(item.id)} className="px-1 py-1 bg-gray-200 rounded text-xs">+</button>
+                  <button onClick={(e) => { e.stopPropagation(); incrementQuantity(item.id); }} className="px-1 py-1 bg-gray-200 rounded text-xs">+</button>
                 </div>
               </div>
-              <BiX className="text-red-500 cursor-pointer" onClick={() => removeFromCart(item.id)} />
+              <BiX className="text-red-500 cursor-pointer" onClick={(e) => { e.stopPropagation(); removeFromCart(item.id); }} />
             </div>
           ))}
           <div className="flex justify-between items-center mt-4">
             <p className="text-lg font-bold">Total:</p>
-            <p className="text-lg font-bold">Rs.{getTotalPrice().toFixed(2)}</p>
+            <p className="text-lg font-bold">Rs. {getTotalPrice().toFixed(2)}</p>
           </div>
+          
           <OrderCard />
         </div>
       )}
+      {selectedItem && <QuickViewModal item={selectedItem} onClose={closeModal} />}
     </div>
   );
 };

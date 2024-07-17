@@ -27,7 +27,7 @@ const FilterSort = ({ applyFilters }) => {
   };
 
   return (
-    <div className="fixed top-22 left-0 z-20 w-full flex justify-between items-center p-4 bg-gray-100 rounded-md shadow-md"
+    <div className="fixed top-22 left-0 z-10 w-full flex justify-between items-center p-4 bg-gray-100 rounded-md shadow-md"
 
 
 >

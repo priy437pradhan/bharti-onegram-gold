@@ -5,7 +5,7 @@ const ServicesItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="mb-4">
+    <div className="mb-4 p-2">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`flex justify-between items-center w-full py-4 px-6 bg-gradient-to-r  text-black rounded-lg shadow-md focus:outline-none transition-transform duration-300 ${isOpen ? 'transform scale-105' : ''}`}

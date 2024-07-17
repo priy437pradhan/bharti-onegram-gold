@@ -5,11 +5,22 @@ import { FaHeart } from 'react-icons/fa';
 import { CombinedData } from '../lib/CombinedData';
 import '../App.css';
 import { useWishList } from '../Context/WishListContext';
+// import { FiShoppingCart, FiCheckCircle } from 'react-icons/fi';
+// import { useCart } from '../Context/CartContext';
+// import HandleOrder from '../components/HandleOrder';
+
 
 const MainCatCard = ({ id, title, discount, imageUrl, price }) => {
   const CombinedDataItem = CombinedData.find((item) => item.id === id) || {};
   const card = { ...CombinedDataItem };
+  // const { addToCart } = useCart();
+  // const [addedToCart, setAddedToCart] = useState(false);
 
+  // const addToCartHandler = (e) => {
+  //   e.stopPropagation();
+  //   addToCart(card);
+  //   setAddedToCart(true);
+  // };
   const navigate = useNavigate();
   const { addToWishList, removeFromWishList, wishListItems } = useWishList();
   const [isWishlisted, setIsWishlisted] = useState(false);
@@ -51,6 +62,26 @@ const MainCatCard = ({ id, title, discount, imageUrl, price }) => {
         >
           <FaHeart className={isWishlisted ? 'text-[#ff0066]' : 'text-gray-300'} />
         </button>
+        <div className='flex justify-between'>
+              {/* <button
+                onClick={addToCartHandler}
+                disabled={addedToCart}
+                className={` mt-4 h-10   items-center justify-center py- px-2 rounded-md transition-colors duration-300 text-black font-semibold border border-black  text-sm`}
+              >
+                {addedToCart ? (
+                  <>
+                    <FiCheckCircle className="mr-1 text-black" size={12} />
+                    Added
+                  </>
+                ) : (
+                  <>
+                    <FiShoppingCart className="mr-1 text-black" size={12} />
+                    Add
+                  </>
+                )}
+              </button> */}
+              {/* <HandleOrder card={card} /> */}
+              </div>
       </div>
     </div>
   );
