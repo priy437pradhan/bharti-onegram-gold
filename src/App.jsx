@@ -10,6 +10,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import CartPage from './pages/CartPage'; 
 import WishListPage from './pages/WishListPage';
+import DesktopPopup from './components/DesktopPopup';
 
 import './App.css';
 
@@ -32,6 +33,7 @@ function App() {
        
       </Routes>
      <Footer/>
+     <DesktopPopup />
     </>
   );
 }
