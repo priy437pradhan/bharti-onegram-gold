@@ -1,6 +1,6 @@
 const HandleOrder = ({ card }) => {
     const handleOrder = () => {
-      const orderUrl = `https://wa.me/9861667624?text=${encodeURIComponent(
+      const orderUrl = `https://wa.me/7077817064?text=${encodeURIComponent(
         `Hello, I am interested in the ${card.title}.\n\nCheck it out here: ${window.location.href}`
       )}`;
       window.open(orderUrl, '_blank');
